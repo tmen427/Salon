@@ -2,8 +2,9 @@ const db = require("../db");
 
 const postNewAppointments = (req,res)=> {
    
-    // const id = req.body.Id;  
-     const Name = req.body.Name;
+
+     const FirstName = req.body.FirstName;
+     const LastName = req.body.LastName; 
      const Phone = req.body.Phone;  
      const Birthday = req.body.Birthday;
      const Email = req.body.Email;
@@ -13,17 +14,17 @@ const postNewAppointments = (req,res)=> {
      const Notes = req.body.Notes; 
 
      console.log(req.body)
-     console.log(req.body.AppointmentDay)
 
-db.query('INSERT INTO Appointments (name, phone, birthday,  email, notifications, appointmentDay, appointmentTime, notes) VALUES (?,?,?,?,?,?,?,?)' , 
-   [Name, Phone, Birthday, Email,Notifications, AppointmentDay, AppointmentTime,  Notes ],(error, result)=> {
+
+db.query('INSERT INTO Appointments (firstName, lastName,  phone, birthday,  email, notifications, appointmentDay, appointmentTime, notes) VALUES (?,?,?,?,?,?,?,?,?)' , 
+   [FirstName, LastName, Phone, Birthday, Email,Notifications, AppointmentDay, AppointmentTime,  Notes ],(error, result)=> {
     if (error) {
       res.send(error);
       console.log(error); 
     }
     else {
       console.log('Created a new post for Appointments!');
-      //console.log(result);
+     // console.log(result);
     }
     
    })
