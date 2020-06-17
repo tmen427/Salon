@@ -103,8 +103,11 @@ function handleInputChange (event) {
   if (name==='email') {
     setEmail(value)
   }  
-  if (name==='notifications') {
-    setNotifactions(value)
+  if (value==='notificationTrue') {
+    setNotifactions(true)
+  }
+  if (value==='notificationsFalse') {
+    setNotifactions(false)
   }
   if (name==='appointmentDay') {
     setAppointmentDay(value)
@@ -177,12 +180,12 @@ function handleInputChange (event) {
 
 
                     <div class="col-sm-6">
-                    <label  >  Recieve Emails 
+                    <label  >  Recieve Birthday Email?  
                     <select onChange={handleInputChange}>
-                    <option name="notifications" value="false" class="form-control">
+                    <option value="notificationFalse" onChange={handleInputChange} class="form-control">
                           No
                          </option>
-                        <option name="notificatoins" class="form-control" value="true">
+                    <option  value="notificationTrue" onChange={handleInputChange} class="form-control" >
                           Yes
                     </option>
       
