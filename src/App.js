@@ -100,7 +100,7 @@ function handleInputChange (event) {
 
 
   return (
-    <div>
+    <div style={{backgroundColor: "tan"}}>
   <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">
       <img
