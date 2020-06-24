@@ -45,8 +45,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-  
-const port = process.env.PORT || 5000;
-app.listen(port);
-  
-console.log("Hi, the server is listening on port " + port + " and the front-end app is running on port 3000" );
+
+//const port = process.env.PORT || 5000;
+//app.listen(port);
+app.listen(process.env.PORT || 5000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
+
+
+//console.log("Hi, the server is listening on port " + port + " and the front-end app is running on port 3000" );
