@@ -20,7 +20,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
 
     "server": "nodemon server.js",
     "test": "react-scripts test",

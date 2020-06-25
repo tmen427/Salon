@@ -32,7 +32,7 @@ function App() {
                   setCustomers(data);
                   } 
                   catch (err) {
-                  throw new Error("Unable to fetch the customers");
+                //  throw new Error("Unable to fetch the customers");
                 }
               };
               fetchData();
