@@ -27,7 +27,8 @@ function App() {
            
             const fetchData = async () => {
                 try {
-                  const res = await fetch("http://localhost:5000/api/All_Customers");
+                //  const res = await fetch("http://localhost:5000/api/All_Customers");
+                const res = await fetch("/api/All_Customers");
                   const data = await res.json();
                   setCustomers(data);
                   } 
@@ -61,8 +62,8 @@ function handleSubmit (event) {
 console.log(data);
 
  //console.log(props.route); 
-
- fetch("http://localhost:5000/api/post/Appointments", {
+ fetch("/api/post/Appointments", {
+ //fetch("http://localhost:5000/api/post/Appointments", {
    method: "POST",
    headers: { "Content-Type": "application/json" },
    body: JSON.stringify(data)
