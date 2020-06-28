@@ -34,8 +34,8 @@ function App() {
                   setCustomers(data);
                   } 
                   catch (err) {
-              //     console.log("there has been an error" + error.message)
-                  throw new Error("Unable to fetch the customers");
+                  console.log("there has been an error" + error.message)
+               //   throw new Error("Unable to fetch the customers");
                 }
               };
               fetchData();
