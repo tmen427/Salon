@@ -5,6 +5,8 @@ const path = require("path");
 const app = express();
 const bodyParser = require("body-parser");
 
+
+
 //browser wil block since the server and frontend are on different ports, unless the below lines are included
 var cors = require('cors')
 app.use(cors())
@@ -29,7 +31,7 @@ app.use(require("./Appointment/Appointment_Routes.js"));
 
 app.get("/api/hello", (req, res) => {
     res.json("hello world!");
-    console.log("hopefully this works")
+    console.log("hello!")
   });
   
   // Handles any requests that don't match the ones above

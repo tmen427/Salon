@@ -34,7 +34,7 @@ const postNewAppointments = (req,res)=> {
      const Notes = req.body.Notes; 
   
    //  console.log(req.body)
-        console.log(req.body.Notifications)
+      //  console.log(req.body.Notifications)
 
 db.query('INSERT INTO Appointments (firstName, lastName,  phone, birthday,  email, notifications, appointmentDay, appointmentTime, notes) VALUES (?,?,?,?,?,?,?,?,?)' , 
    [FirstName, LastName, Phone, Birthday, Email,Notifications, AppointmentDay, AppointmentTime,  Notes ],(error, result)=> {

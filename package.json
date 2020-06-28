@@ -26,7 +26,8 @@
     "client": "react-scripts start",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server/server.js"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "react-scripts build"
  
   
  },
