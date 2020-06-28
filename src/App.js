@@ -158,7 +158,9 @@ function handleInputChange (event) {
     </Nav>
   </Navbar>
 
-
+  <div class="container py-5">
+    <h1>Total Customers: {Customers.length}</h1>
+</div>
 
 <div class="container py-5">
     <div class="row">
