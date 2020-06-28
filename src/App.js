@@ -34,7 +34,7 @@ function App() {
                   setCustomers(data);
                   } 
                   catch (err) {
-                //  throw new Error("Unable to fetch the customers");
+                  throw new Error("Unable to fetch the customers");
                 }
               };
               fetchData();
@@ -72,6 +72,7 @@ console.log("Alright i think the post worked!")
  })
    .then(function(response) {
      if (response.status >= 400) {
+       console.log(response);
        throw new Error("Bad response from server");
      }
      return response.json();
