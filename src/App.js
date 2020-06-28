@@ -64,7 +64,7 @@ console.log(data);
 console.log("Alright i think the post worked!")
 
  //console.log(props.route); 
- fetch("/api/post/Appointments", {
+ fetch("/api/Appointments", {
  //fetch("http://localhost:5000/api/post/Appointments", {
    method: "POST",
    headers: { "Content-Type": "application/json" },

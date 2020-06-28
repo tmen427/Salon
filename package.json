@@ -27,9 +27,8 @@
     "client": "react-scripts start",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "NODE_ENV=production node index.js",
-    "build": "react-scripts build",
-    "heroku-postbuild": "npm run build"
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  
 
 
   },
