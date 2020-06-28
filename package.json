@@ -21,18 +21,14 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-   
     "server": "nodemon server/server.js",
     "test": "react-scripts test",
     "client": "react-scripts start",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cross-env NODE_ENV=production react-scripts build"
+    "start": "node server/server.js"
   
-
-
-  },
+ },
   "eslintConfig": {
     "extends": "react-app"
   },
