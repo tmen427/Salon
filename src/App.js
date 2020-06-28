@@ -100,7 +100,7 @@ console.log("Alright i think the post worked!")
    setNotes("")
 
 
-   window.location.reload()
+  // window.location.reload()
  event.preventDefault();
  event.target.reset(); 
 }
