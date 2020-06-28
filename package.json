@@ -18,6 +18,8 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -26,12 +28,9 @@
     "client": "react-scripts start",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-
     "build": "react-scripts build",
     "start": "node server/server.js"
- 
-  
- },
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -50,5 +49,4 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
-
 }

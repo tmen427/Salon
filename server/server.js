@@ -7,9 +7,10 @@ const bodyParser = require("body-parser");
 
 
 
-//browser wil block since the server and frontend are on different ports, unless the below lines are included
-//var cors = require('cors')
-//app.use(cors())
+//browser wil block since the server and frontend are on different ports-YOU MUST INLCUDE THIS IN DEVELOPMENTAL MODE
+// in production mode it does not matter since frontend and backend will by optimized by web-hosting service to run on the same port
+var cors = require('cors')
+app.use(cors())
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
