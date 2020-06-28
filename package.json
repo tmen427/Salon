@@ -26,7 +26,8 @@
     "client": "react-scripts start",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "nodemon server/server.js"
+    "start": "nodemon server/server.js"
+ 
   
  },
   "eslintConfig": {
