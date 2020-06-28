@@ -8,8 +8,8 @@ const bodyParser = require("body-parser");
 
 
 //browser wil block since the server and frontend are on different ports, unless the below lines are included
-var cors = require('cors')
-app.use(cors())
+//var cors = require('cors')
+//app.use(cors())
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,8 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // parse application/json
 app.use(bodyParser.json());
+
+
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, "../public")));
+//app.use(express.static(path.join(__dirname, "../public")));
 
 
 
