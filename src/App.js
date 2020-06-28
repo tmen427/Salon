@@ -27,8 +27,9 @@ function App() {
            
             const fetchData = async () => {
                 try {
-                //  const res = await fetch("http://localhost:5000/api/All_Customers");
+ //                 const res = await fetch("http://localhost:5000/api/All_Customers");
                 const res = await fetch("/api/All_Customers");
+       
                   const data = await res.json();
                   setCustomers(data);
                   } 
@@ -60,6 +61,7 @@ function handleSubmit (event) {
       Notes:Notes, 
     }
 console.log(data);
+console.log("Alright i think the post worked!")
 
  //console.log(props.route); 
  fetch("/api/post/Appointments", {
