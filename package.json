@@ -9,6 +9,7 @@
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.4",
     "i": "^0.3.6",
     "mdbootstrap": "^4.19.0",
     "mdbreact": "^4.27.0",
@@ -20,7 +21,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start":  "concurrently \"npm run server\" \"npm run client\"",
+    "start": "react-scripts start",
     "server": "nodemon server/server.js",
     "test": "react-scripts test",
     "client": "react-scripts start",
@@ -45,6 +46,5 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-  "proxy": "http://localhost:3306" 
- 
+  "proxy": "http://localhost:3306"
 }
