@@ -35,7 +35,7 @@ function App() {
                   } 
                   catch (err) {
               //     console.log("there has been an error" + error.message)
-                  throw new Error("Unable to fetch the customers" + err);
+                  throw new Error("Unable to fetch the customers");
                 }
               };
               fetchData();
