@@ -12,7 +12,7 @@ return (
     <Navbar.Brand href="Home">La Belle</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="/Home">Home</Nav.Link>
-      <Nav.Link href="/All">All Customers</Nav.Link>
+      <Nav.Link href="/All">Total Customers</Nav.Link>
 
     </Nav>
   </Navbar>
