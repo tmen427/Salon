@@ -47,23 +47,22 @@ fetch("/api/login", {
 
     }
     if (response.status==200) {
-    //go to login after you have signed up
-      window.location.href = '/';
+    //if successful go to homepage
+     window.location.href = '/';
   }
       return response.json();
   })
+ 
   
   .then(function(data) {
     //any data that is returned from the backend 
    alert('the data ' + data.message);
-  
-    // getting data back, but not maintaing session
-   // window.location.replace(data);
-    })
+  })
   .catch(function(err) {
     console.log(err);
-    alert(err + " the app may crash ");
-  });
+  //  alert(err + " the app may crash ");
+  })
+  ;
 
 
 

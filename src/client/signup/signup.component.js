@@ -36,7 +36,7 @@ return email.length > 0 && password.length > 0 && password_verify.length> 0  && 
 
 function handleChange (event) {
 const value = event.target.value;
-console.log(value);
+
 
 const id = event.target.id; 
 // get the id from the form and set and new value for them 
@@ -58,7 +58,7 @@ const handleSubmit = event => {
 const data = {email: email,
               Password: password
             };
-console.log(data);
+//console.log(data);
 
 fetch("/api/post/signup", {
   method: "POST",
@@ -98,9 +98,9 @@ fetch("/api/post/signup", {
          // the case when the email is unique
          if (email!==database_email[x].email) {
           counter2++; 
-       
-          console.log(counter2);
-          console.log(database_email.length);
+
+         // console.log(counter2);
+        alert(database_email.length);
           if (counter2===database_email.length) {
          //   alert('unique password!')
          //if unique then Login route for now

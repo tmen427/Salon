@@ -56,9 +56,6 @@ const getUsers = (req,res) => {
   })
 }
 
-
-
-
 const postSignUp = (req,res) => {
 
   const email = req.body.email; 
@@ -80,7 +77,15 @@ const postSignUp = (req,res) => {
 }
 
 
-
+const login = (req, res)=> {
+  
+    // `req.user` contains the authenticated user object
+   // res.redirect('/users/' + req.user.username);
+   console.log('the returned object form passport is' + req.user.email); 
+   res.status(200);
+   res.send("hello")
+   console.log("i think it worked");
+  };
 
 
 
@@ -92,5 +97,6 @@ const postSignUp = (req,res) => {
     getCustomers,
     postNewAppointments,
     getUsers,
-    postSignUp
+    postSignUp, 
+    login
   };

@@ -4,7 +4,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const bodyParser = require("body-parser");
-
+const passport = require('passport');
+require("./Appointment/Login/Passport")(passport);
 
 
 //browser wil block since the server and frontend are on different ports-YOU MUST INLCUDE THIS IN DEVELOPMENTAL MODE
@@ -23,6 +24,16 @@ app.use(bodyParser.json());
 
 // Serve the static files from the React app
 //app.use(express.static(path.join(__dirname, "../public")));
+
+app.use(require('express-session')({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 
 
 
