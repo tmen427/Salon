@@ -32,6 +32,8 @@ app.use(require("./Appointment/Appointment_Routes.js"));
 
 
 
+
+
 app.get("/api/hello", (req, res) => {
     res.json("hello world!");
     console.log("hello!")

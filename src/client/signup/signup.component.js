@@ -58,9 +58,9 @@ const handleSubmit = event => {
 const data = {email: email,
               Password: password
             };
+console.log(data);
 
-
-fetch("/api/signup", {
+fetch("/api/post/signup", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(data)
@@ -75,6 +75,7 @@ fetch("/api/signup", {
   });
 
 // check to see if the email is unique or if it is a duplicate, if not unique do not allow POST....
+//maybe do the email check in the backend not here...?
   var x = 0;
   var counter = 0;
   var counter2 = 1;   
@@ -102,16 +103,16 @@ fetch("/api/signup", {
           console.log(database_email.length);
           if (counter2===database_email.length) {
          //   alert('unique password!')
-         //if unique then go to this route for now 
-            window.location.href = '/login';
+         //if unique then Login route for now
+            window.location.href = '/Login';
             break; 
           }
      }
 }
 
 event.preventDefault();
-event.target.reset(); //this will clear the form after you submit
-// when the post is complete clear the form and possibly redirect the user to the main page??
+event.target.reset(); //clear the form 
+//window.location.href = '/';
 setEmail("");
 setPassword("");
 }

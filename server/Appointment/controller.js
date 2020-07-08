@@ -3,8 +3,6 @@ const db = require("../db");
 
 
 const getCustomers = (req,res) => {
-
-
     db.query('SELECT * from Appointments', (error, result)=> {
       if (error) {
         res.send(error); 
@@ -13,12 +11,7 @@ const getCustomers = (req,res) => {
         res.json(result)    
       }
     })
-
-}
-
-
-
-
+  }
 
 const postNewAppointments = (req,res)=> {
    
@@ -48,10 +41,56 @@ db.query('INSERT INTO Appointments (firstName, lastName,  phone, birthday,  emai
     }
     
    })
+}
+
+
+
+const getUsers = (req,res) => {
+  db.query('SELECT * from SignIn', (error, result)=> {
+    if (error) {
+      res.send(error); 
+    }
+    else {
+      res.json(result)    
+    }
+  })
+}
+
+
+
+
+const postSignUp = (req,res) => {
+
+  const email = req.body.email; 
+  const password = req.body.Password; 
+  
+  db.query('INSERT INTO SignIn (email, password) VALUES (?,?)' , 
+  [email, password],(error, result)=> {
+   if (error) {
+     res.send(error);
+     console.log(error); 
    }
+   else {
+
+     console.log('Created a User!');
+
+   }
+   
+  })
+}
+
+
+
+
+
+
+
+
    
 
    module.exports = {
     getCustomers,
     postNewAppointments,
+    getUsers,
+    postSignUp
   };
