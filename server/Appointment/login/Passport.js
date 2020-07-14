@@ -11,6 +11,8 @@ module.exports = function(passport) {
                         return done(err);
                     } else if (Object.keys(user).length === 0) {
                         console.log(`${email} not found`);
+             
+                       
                         return done(null, false);
                     } else {
                         console.log(user)

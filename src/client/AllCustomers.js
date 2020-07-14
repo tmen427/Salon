@@ -23,7 +23,7 @@ const [Customers, setCustomers] = useState([]);
                       catch (err) {
                
                      throw new Error("Unable to fetch the customers");
-                    }
+                   }
                   };
                   fetchData();
         },  [],

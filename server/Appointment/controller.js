@@ -96,7 +96,7 @@ const login = (req, res)=> {
    res.json({token});
    
 
-  // console.log("the login worked")
+
  
   };
 
@@ -107,15 +107,17 @@ const users = (req,res) => {
     var token = req.cookies.token; 
     // var token = req.headers['x-access-token'];
  
+    //get the user back by decoding the token
     var decoded = jwt.verify(token, 'shhhhhh');
-    //console.log('the decoded value' + decoded) // bar
+
     //console.log(Object.keys(decoded))
 
  
     // get the decoded email from the token ? is this bad practice ?
-    console.log('decoded email is '+ decoded.email)
+    console.log('decoded email is '+ decoded.email + " and role is " + decoded.role); 
 
-      res.json(decoded.email);
+    res.json(decoded.email);
+      
 
  // if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
  // if (decoded) return res.status(400).send({ auth: true, message: token });
