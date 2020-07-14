@@ -5,7 +5,7 @@ import { Navbar, Nav} from 'react-bootstrap';
 
 function NavBar () {
 
-    const [Authenticated, setAuthenticated] = useState(false); 
+
 
 // jwt verify if if req.user form fetch setAuthenticated = true
 
@@ -22,8 +22,8 @@ return (
       <Nav.Link href="/Login">Login</Nav.Link>
 
 
-       {Authenticated ?  <Nav.Link href="/Protected">Protected</Nav.Link> : 
-         <Nav.Link href="/Home"> Can't see protected route</Nav.Link>}   
+    <Nav.Link href="/Protected">Protected</Nav.Link>  
+      
 
     </Nav>
   </Navbar>

@@ -35,14 +35,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 //app.use(passport.session());
 
-app.use(function(req, res, next) {
-  res.header(
-    "Access-Control-Allow-Headers",
-    "x-access-token, Origin, Content-Type, Accept",
-    res.setHeader('Access-Control-Allow-Methods','GET')
-  );
-  next();
-});
+
 
 
 

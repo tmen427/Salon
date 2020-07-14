@@ -85,8 +85,8 @@ const login = (req, res)=> {
 
   // res.clearCookie('token');
    var email = req.user.email; 
-   console.log(email)
-   const payload = { email: req.user.email };
+
+   const payload = { email: req.user.email, role: 'admin'};
 
    // our webtoken will be created with an email in the object, in the future use private key instead of just 'shhhhh'
    var token = jwt.sign(payload , 'shhhhhh'); 
@@ -94,8 +94,9 @@ const login = (req, res)=> {
    // send the above token to the frontend as a http cookie 
    res.cookie('token', token, { httpOnly: true });
    res.json({token});
+   
 
-   console.log("the login worked")
+  // console.log("the login worked")
  
   };
 
@@ -107,12 +108,17 @@ const users = (req,res) => {
     // var token = req.headers['x-access-token'];
  
     var decoded = jwt.verify(token, 'shhhhhh');
-    console.log('the decoded value' + decoded) // bar
-    console.log(Object.keys(decoded))
+    //console.log('the decoded value' + decoded) // bar
+    //console.log(Object.keys(decoded))
 
+ 
+    // get the decoded email from the token ? is this bad practice ?
+    console.log('decoded email is '+ decoded.email)
 
-  if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
-  if (decoded) return res.status(400).send({ auth: true, message: token });
+      res.json(decoded.email);
+
+ // if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
+ // if (decoded) return res.status(400).send({ auth: true, message: token });
  // jwt.verify(token, decoded, function(err, decoded) {
  //  if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.'})
  // }); 
