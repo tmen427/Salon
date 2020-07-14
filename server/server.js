@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const passport = require('passport');
 require("./Appointment/Login/Passport")(passport);
+var cookieParser = require('cookie-parser')
 
 
 //browser wil block since the server and frontend are on different ports-YOU MUST INLCUDE THIS IN DEVELOPMENTAL MODE
@@ -14,26 +15,34 @@ var cors = require('cors')
 app.use(cors())
 
 
-app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // parse application/json
 app.use(bodyParser.json());
-
+app.use(cookieParser()); 
 
 // Serve the static files from the React app
 //app.use(express.static(path.join(__dirname, "../public")));
 
-app.use(require('express-session')({
-  secret: 'keyboard cat',
-  resave: true,
-  saveUninitialized: true
-}));
+//app.use(require('express-session')({
+//  secret: 'keyboard cat',
+//  resave: true,
+//  saveUninitialized: true
+// }));
+
 app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.session());
 
-
+app.use(function(req, res, next) {
+  res.header(
+    "Access-Control-Allow-Headers",
+    "x-access-token, Origin, Content-Type, Accept",
+    res.setHeader('Access-Control-Allow-Methods','GET')
+  );
+  next();
+});
 
 
 
@@ -63,9 +72,10 @@ app.get("/api/hello", (req, res) => {
 if (process.env.NODE_ENV == "production") {
   app.use(express.static(path.join(__dirname, "../build")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
-  });
+  
+  //app.get("*", (req, res) => {
+  //  res.sendFile(path.join(__dirname, "../build", "index.html"));
+ // });
 }
 
 

@@ -1,4 +1,6 @@
 const db = require("../db");
+var jwt = require('jsonwebtoken');
+
 
 
 
@@ -60,6 +62,8 @@ const postSignUp = (req,res) => {
 
   const email = req.body.email; 
   const password = req.body.Password; 
+
+
   
   db.query('INSERT INTO SignIn (email, password) VALUES (?,?)' , 
   [email, password],(error, result)=> {
@@ -78,16 +82,40 @@ const postSignUp = (req,res) => {
 
 
 const login = (req, res)=> {
-  
-    // `req.user` contains the authenticated user object
-   // res.redirect('/users/' + req.user.username);
-   console.log('the returned object form passport is' + req.user.email); 
-   res.status(200);
-   res.send("hello")
-   console.log("i think it worked");
+
+   var email = req.user.email; 
+   console.log(email)
+   const payload = { email: req.user.email };
+
+   // our webtoken will be created with an email in the object, use a private key instead of just 'shhhhh'
+   var token = jwt.sign(payload , 'shhhhhh'); 
+
+   // send the above token to the frontend as a http cookie 
+   res.cookie('token', token, { httpOnly: true });
+   res.json({token});
+
+   console.log("the login worked")
+ 
   };
 
 
+
+const users = (req,res) => {
+
+    var token = req.cookies.token; 
+    // var token = req.headers['x-access-token'];
+ 
+    var decoded = jwt.verify(token, 'shhhhhh');
+    console.log('the decoded value' + decoded) // bar
+    console.log(Object.keys(decoded))
+
+
+  if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
+  if (token) return res.status(400).send({ auth: true, message: token });
+ // jwt.verify(token, config.secret, function(err, decoded) {
+ //  if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.'})
+ // }); 
+}
 
 
 
@@ -98,5 +126,6 @@ const login = (req, res)=> {
     postNewAppointments,
     getUsers,
     postSignUp, 
-    login
+    login,
+    users
   };

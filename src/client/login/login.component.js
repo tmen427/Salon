@@ -43,12 +43,16 @@ fetch("/api/login", {
     if (response.status >= 400) {
     //if there is a bad response from the server it means that the Passport.js file has found something wrong
     //with either the username or the password
-     window.location.href = '/login';
+    
+    //window.location.href = '/login';
 
     }
     if (response.status==200) {
     //if successful go to homepage
-     window.location.href = '/';
+
+  //get the email or username from the backend if everything is authenticated
+    console.log('the returned email is' + data.email)
+   //  window.location.href = '/';
   }
       return response.json();
   })
@@ -56,7 +60,7 @@ fetch("/api/login", {
   
   .then(function(data) {
     //any data that is returned from the backend 
-   alert('the data ' + data.message);
+     // alert('the data ' + data.message);
   })
   .catch(function(err) {
     console.log(err);

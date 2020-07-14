@@ -8,6 +8,8 @@ import Signup from "./client/signup/signup.component";
 
 import Login from "./client/login/login.component"; 
 
+import Protected from "./client/Protected"; 
+
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <Route exact path="/All" component={AllCustomers} />
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Login" component={Login} />
+
+        <Route exact path="/Protected" component={Protected} />
+
       </Switch>
 
   </div>

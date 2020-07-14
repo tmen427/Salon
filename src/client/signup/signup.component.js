@@ -100,7 +100,7 @@ fetch("/api/post/signup", {
           counter2++; 
 
          // console.log(counter2);
-        alert(database_email.length);
+
           if (counter2===database_email.length) {
          //   alert('unique password!')
          //if unique then Login route for now
