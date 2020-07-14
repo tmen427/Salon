@@ -83,11 +83,12 @@ const postSignUp = (req,res) => {
 
 const login = (req, res)=> {
 
+  // res.clearCookie('token');
    var email = req.user.email; 
    console.log(email)
    const payload = { email: req.user.email };
 
-   // our webtoken will be created with an email in the object, use a private key instead of just 'shhhhh'
+   // our webtoken will be created with an email in the object, in the future use private key instead of just 'shhhhh'
    var token = jwt.sign(payload , 'shhhhhh'); 
 
    // send the above token to the frontend as a http cookie 
@@ -111,8 +112,8 @@ const users = (req,res) => {
 
 
   if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
-  if (token) return res.status(400).send({ auth: true, message: token });
- // jwt.verify(token, config.secret, function(err, decoded) {
+  if (decoded) return res.status(400).send({ auth: true, message: token });
+ // jwt.verify(token, decoded, function(err, decoded) {
  //  if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.'})
  // }); 
 }
