@@ -1,9 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
 
 
 
 function NavBar () {
+  const [users, setUsers] = useState("");
+
+  useEffect(
+      ()=> {
+             
+              const fetchData = async () => {
+                  try {
+
+                  const res = await fetch("/users");
+         
+                    const data = await res.json();
+                    setUsers(data);
+                    } 
+                    catch (err) {
+             
+                   throw new Error("Unable to fetch users");
+                  }
+                };
+                fetchData();
+      },  [],
+  )
+
+console.log(users);
+
+
 
 
 
@@ -18,11 +43,15 @@ return (
     <Nav className="mr-auto">
       <Nav.Link href="/Home">Home</Nav.Link>
       <Nav.Link href="/All">Total Customers</Nav.Link>
-      <Nav.Link href="/SignUp">Sign Up </Nav.Link>
-      <Nav.Link href="/Login">Login</Nav.Link>
+     
+      {users ?  null:
+       <Nav.Link href="/SignUp" >Sign Up </Nav.Link> }
+
+      {users ? <Nav.Link href="/SignOut"><b>SIGN OUT</b></Nav.Link>
+      :  <Nav.Link href="/Login">LOGIN</Nav.Link>
+      }
 
 
-    <Nav.Link href="/Protected">Protected</Nav.Link>  
       
 
     </Nav>
