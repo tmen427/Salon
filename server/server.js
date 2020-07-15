@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(cookieParser()); 
 
 // Serve the static files from the React app
-//app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 //app.use(require('express-session')({
 //  secret: 'keyboard cat',
