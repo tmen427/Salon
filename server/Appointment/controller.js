@@ -90,9 +90,10 @@ const login = (req, res)=> {
 
    // our webtoken will be created with an email in the object, in the future use private key instead of just 'shhhhh'
    var token = jwt.sign(payload , 'shhhhhh'); 
-
+   //res.cookie('token', token,  { expires: new Date(Date.now()+20000), httpOnly: true })
    // send the above token to the frontend as a http cookie 
-   res.cookie('token', token, { httpOnly: true });
+   res.cookie('token',token, { httpOnly: true });
+   //res.cookie('token', token,  { expires: new Date(Date.now()), httpOnly: true })
    res.json({token});
    
 
@@ -127,7 +128,12 @@ const users = (req,res) => {
 }
 
 
+const SignOut = (req,res) => {
+  res.cookie('token',  { expires: new Date(Date.now()), httpOnly: true })
+  res.json("you should be logged out now")
+// console.log("hopefully the token has been deleted")
 
+}
    
 
    module.exports = {
@@ -136,5 +142,6 @@ const users = (req,res) => {
     getUsers,
     postSignUp, 
     login,
-    users
+    users,
+    SignOut
   };

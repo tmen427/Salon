@@ -19,7 +19,7 @@ function NavBar () {
                     } 
                     catch (err) {
              
-                   throw new Error("Unable to fetch users");
+                   console.log(err)
                   }
                 };
                 fetchData();
@@ -39,7 +39,8 @@ return (
 
 
 <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="Home">La Belle</Navbar.Brand>
+ 
+    <Navbar.Brand href="Home">Hello {users}</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="/Home">Home</Nav.Link>
       <Nav.Link href="/All">Total Customers</Nav.Link>

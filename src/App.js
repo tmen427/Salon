@@ -8,6 +8,7 @@ import Signup from "./client/signup/signup.component";
 
 import Login from "./client/login/login.component"; 
 
+import SignOut from "./client/SignOut"; 
 
 
 
@@ -24,6 +25,8 @@ function App() {
         <Route exact path="/All" component={AllCustomers} />
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Login" component={Login} />
+
+        <Route exact path="/SignOut" component={SignOut} />
 
      
 

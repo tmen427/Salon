@@ -20,7 +20,7 @@ router.post("/api/login",  passport.authenticate('local'),  controller.login);
 router.get("/users",  controller.users); 
 
 
-
+router.get("/SignOut", controller.SignOut); 
 
 
 
