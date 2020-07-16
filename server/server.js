@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(cookieParser()); 
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, "../public")));
+//app.use(express.static(path.join(__dirname, "../public")));
 
 //app.use(require('express-session')({
 //  secret: 'keyboard cat',
@@ -39,7 +39,7 @@ app.use(passport.initialize());
 
 
 
-app.use(require("./Appointment/Appointment_Table.js")); 
+
 app.use(require("./Appointment/Appointment_Routes.js")); 
 
 
@@ -57,19 +57,20 @@ app.get("/api/hello", (req, res) => {
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
-//   Express only serves static assets in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("src/index.js"));
-}
 
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static(path.join(__dirname, "../build")));
+  //   Express only serves static assets in production
+//if (process.env.NODE_ENV === "production") {
+ // app.use(express.static("src/index.js"));
+//}
+
+//if (process.env.NODE_ENV == "production") {
+ // app.use(express.static(path.join(__dirname, "../build")));
 
   
-  //app.get("*", (req, res) => {
-  //  res.sendFile(path.join(__dirname, "../build", "index.html"));
- // });
-}
+ // app.get("*", (req, res) => {
+   // res.sendFile(path.join(__dirname, "../build", "index.html"));
+ //});
+//}
 
 
 

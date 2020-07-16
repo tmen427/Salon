@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const controller = require("./controller");
-var passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
-const validateToken = require("./login/util.js").validateToken;
+var passport = require('passport');
+
 
 router.get("/api/All_Customers", controller.getCustomers)
 
@@ -19,7 +19,7 @@ router.post("/api/login",  passport.authenticate('local'),  controller.login);
 //check if you are logged in and also if you have the correct jwt token
 router.get("/users",  controller.users); 
 
-
+// signout by causing the JWT to expire 
 router.get("/SignOut", controller.SignOut); 
 
 

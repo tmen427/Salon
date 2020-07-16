@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
 
+import PrivateRouting from './PrivateRouting';
+
+
 
 
 function NavBar () {
@@ -26,7 +29,7 @@ function NavBar () {
       },  [],
   )
 
-console.log(users);
+
 
 
 
@@ -42,9 +45,15 @@ return (
  
     <Navbar.Brand href="Home">Hello {users}</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="/Home">Home</Nav.Link>
-      <Nav.Link href="/All">Total Customers</Nav.Link>
-     
+    <Nav.Link href="/Home">Home</Nav.Link>
+
+
+    <PrivateRouting>
+     <Nav.Link href="/All">Total Customers</Nav.Link>
+    </PrivateRouting>
+
+
+
       {users ?  null:
        <Nav.Link href="/SignUp" >Sign Up </Nav.Link> }
 

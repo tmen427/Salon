@@ -115,8 +115,10 @@ const users = (req,res) => {
 
  
     // get the decoded email from the token ? is this bad practice ?
-    console.log('decoded email is '+ decoded.email + " and role is " + decoded.role); 
+    // console.log('decoded email is '+ decoded.email + " and role is " + decoded.role); 
 
+
+    // send this to the frontend 
     res.json(decoded.email);
       
 
@@ -130,8 +132,8 @@ const users = (req,res) => {
 
 const SignOut = (req,res) => {
   res.cookie('token',  { expires: new Date(Date.now()), httpOnly: true })
-  res.json("you should be logged out now")
-// console.log("hopefully the token has been deleted")
+   res.json("token has expired!")
+ console.log("hopefully the token has been deleted")
 
 }
    
