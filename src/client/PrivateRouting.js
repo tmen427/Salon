@@ -15,7 +15,9 @@ function PrivateRouting (props) {
                     const res = await fetch("/users");
            
                       const data = await res.json();
+
                       setUsers(data);
+                    
                       } 
                       catch (err) {
                
@@ -25,7 +27,8 @@ function PrivateRouting (props) {
                   fetchData();
         },  [],
     )
-  
+
+//console.log(users)
 
 
 

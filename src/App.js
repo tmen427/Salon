@@ -10,7 +10,7 @@ import Login from "./client/login/login.component";
 
 import SignOut from "./client/SignOut"; 
 
-
+import PrivateRouting from './client/PrivateRouting';
 
 function App() {
   return (
@@ -22,13 +22,18 @@ function App() {
       <Switch>
         <Route exact path="/" component={MakeAppointment} />
         <Route exact path="/Home" component={MakeAppointment} />
-        <Route exact path="/All" component={AllCustomers} />
+
+     
+
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Login" component={Login} />
 
         <Route exact path="/SignOut" component={SignOut} />
 
-     
+        <PrivateRouting>
+        <Route exact path="/All" component={AllCustomers} />
+        
+        </PrivateRouting>
 
       </Switch>
 

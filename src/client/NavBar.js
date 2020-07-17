@@ -48,9 +48,9 @@ return (
     <Nav.Link href="/Home">Home</Nav.Link>
 
 
-    <PrivateRouting>
+ 
      <Nav.Link href="/All">Total Customers</Nav.Link>
-    </PrivateRouting>
+
 
 
 

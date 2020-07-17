@@ -104,25 +104,48 @@ const login = (req, res)=> {
 
 
 const users = (req,res) => {
-
+  
     var token = req.cookies.token; 
     // var token = req.headers['x-access-token'];
- 
-    //get the user back by decoding the token
-    var decoded = jwt.verify(token, 'shhhhhh');
 
-    //console.log(Object.keys(decoded))
-
- 
+    // this is the error if no token then send something else, write this in async
+//var decoded = jwt.verify(token, 'shhhhhh');
     // get the decoded email from the token ? is this bad practice ?
     // console.log('decoded email is '+ decoded.email + " and role is " + decoded.role); 
 
 
     // send this to the frontend 
-    res.json(decoded.email);
+  //res.json(decoded.email);
+      var token; 
+      var decoded; 
+    
+    try {
+      // verify makes sure that the token hasn't expired and has been issued by us
+      var decoded = jwt.verify(token, 'shhhhhh');
       
+      res.json(decoded.email); 
+      // Let's pass back the decoded token to the request object
+      //req.decoded = result;
+      // We call next to pass execution to the subsequent middleware
+      next();
+    } catch (err) {
+      // Throw an error just in case anything goes wrong with verification
+      console.log('This error is comming from the controller.js users because jwt.verify trys to verify an empty string!')
+     // throw new Error(err);
+      
+    }
+  
+  //  res.status(401).send(result);
 
- // if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
+
+
+
+
+
+
+
+
+ // if (!decoded) return res.status(401).send({ auth: false, message: 'No token provided.' });
  // if (decoded) return res.status(400).send({ auth: true, message: token });
  // jwt.verify(token, decoded, function(err, decoded) {
  //  if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.'})
@@ -132,7 +155,7 @@ const users = (req,res) => {
 
 const SignOut = (req,res) => {
   res.cookie('token',  { expires: new Date(Date.now()), httpOnly: true })
-   res.json("token has expired!")
+   res.json(null);
  console.log("hopefully the token has been deleted")
 
 }
