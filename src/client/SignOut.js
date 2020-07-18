@@ -32,7 +32,7 @@ const [removeUsers, setremoveUsers] = useState("");
 
 
 return (
-<div>Hopefully you will be logged out when you click away from this page </div>
+<div style={{padding: '20px'}}>You are now logged out! </div>
 
 
 ); 
