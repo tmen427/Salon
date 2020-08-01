@@ -9,6 +9,46 @@ import "./login.styles.css";
 const Login = ()=>  {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+ const [csrfform, setcsrfform] = useState(""); 
+
+  
+ useEffect(
+  ()=> {
+         
+          const fetchData = async () => {
+              try {
+
+              const res = await fetch("/form");
+     
+                const data = await res.json();
+                setcsrfform(data);
+                } 
+                catch (err) {
+         
+         //      throw new Error("Unable to fetch the customers");
+             }
+            };
+            fetchData();
+  },  [],
+)
+
+//console.log(csrfform);
+
+  //fetch('/process', {
+    //credentials: 'same-origin', // <-- includes cookies in the request
+    //headers: {
+      //'CSRF-Token': token // <-- is the csrf token as a header
+   // },
+
+//)
+
+
+
+
+
+
+
+
   function validateForm() {
     return username.length > 0 && password.length > 0;
   }
@@ -31,12 +71,16 @@ const handleSubmit = event => {
 
 const data = {
     email:username,
-    password:password
+    password:password, 
+
 };
 
+
+// you must pass the csrf-token as a header!!! not as a json object
 fetch("/api/login", {
   method: "POST",
-  headers: { "Content-Type": "application/json", credentials: "include" },
+  credentials: 'same-origin',
+  headers: { "Content-Type": "application/json", credentials: "same-origin", 'CSRF-Token': csrfform },
   body: JSON.stringify(data)
 })
   .then(function(response) {
@@ -82,7 +126,9 @@ setPassword("");
       <div className="main-wrap">
       <div className="main-register-holder">
       <div className="main-register fl-wrap">
-     
+  
+   
+    
 <div></div>
     <div className="Login">
       <form onSubmit={handleSubmit}>
@@ -92,8 +138,11 @@ setPassword("");
             autoFocus
             type="username"
             value={username}
+     
+            
             onChange={handleChange}
           />
+     
         </FormGroup>
         <FormGroup controlId="password" >
           <FormLabel>Password</FormLabel>
@@ -103,6 +152,7 @@ setPassword("");
             type="password"
           />
         </FormGroup>
+  
         <Button
           block
           
@@ -113,7 +163,7 @@ setPassword("");
         </Button>
 
         <p className="mt-3">Click <a href="/signup">HERE </a> to Register!</p>
-        <p className="mt-1">Click <a href="/"> HERE </a> to Return home</p>
+        <p className="mt-1">Click <a href="/"> HERE </a>  to Return home</p>
       </form>
     </div>
     </div>

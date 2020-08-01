@@ -43,9 +43,11 @@ return (
 
 <Navbar bg="primary" variant="dark">
  
-    <Navbar.Brand href="Home">Hello {users}</Navbar.Brand>
+    <Navbar.Brand href="/"> {users}</Navbar.Brand>
     <Nav className="mr-auto">
-    <Nav.Link href="/Home">Home</Nav.Link>
+    <Nav.Link href="/">Home</Nav.Link>
+    <Nav.Link href="/MakeAppointment">Make Appointment</Nav.Link>
+
 
 
  

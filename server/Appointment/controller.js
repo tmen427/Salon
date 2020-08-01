@@ -1,5 +1,6 @@
 const db = require("../db");
 var jwt = require('jsonwebtoken');
+var csrf = require('csurf')
 
 
 
@@ -74,10 +75,25 @@ const postSignUp = (req,res) => {
   })
 }
 
+// in order to protect from csrf attacks this is needed
+const forms = ( (req, res) => {
+  // res.cookie('XSRF-TOKEN', req.csrfToken())
+  // res.render('send', { csrftoken: req.csrfToken() }); 
+
+  //send the CSRF token to the frontend
+  res.json(req.csrfToken())
+  //console.log(req.csrfToken());
+  //console.log('csrf should be made')
+ 
+  }
+  ) 
+
+
 
 
 const login = (req, res)=> {
  
+   console.log(req.body)
   // just put the email in our token for now-change in the future...
   const payload = { email: req.user.email, role: 'admin'};
 
@@ -86,6 +102,7 @@ const login = (req, res)=> {
    // send the above token to the frontend as a http cookie 
    res.cookie('token',token, { httpOnly: true });
 
+
    res.json({token});
   };
 
@@ -93,10 +110,6 @@ const login = (req, res)=> {
 const users = (req,res) => {
   
     var token = req.cookies.token; 
-
-    // send this to the frontend 
-      // var token; 
-     // var decoded; 
     
     try {
       // verify makes sure that the token hasn't expired and has been issued by us
@@ -108,7 +121,7 @@ const users = (req,res) => {
       next();
     } catch (err) {
       // you will get and error if jwt.verify function is empty
-      console.log('jwt.verify is trying to empty string in controller.js file-okay to ignore this error')
+     // console.log('jwt.verify is trying to empty string in controller.js file-okay to ignore this error')
      }
 
 }
@@ -130,5 +143,6 @@ const SignOut = (req,res) => {
     postSignUp, 
     login,
     users,
-    SignOut
+    SignOut, 
+   forms
   };

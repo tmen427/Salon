@@ -9,7 +9,7 @@ import Signup from "./client/signup/signup.component";
 import Login from "./client/login/login.component"; 
 
 import SignOut from "./client/SignOut"; 
-
+import Homepage from "./client/Homepage"; 
 import PrivateRouting from './client/PrivateRouting';
 
 function App() {
@@ -20,20 +20,15 @@ function App() {
   <div>
       <NavBar />
       <Switch>
-        <Route exact path="/" component={MakeAppointment} />
-        <Route exact path="/Home" component={MakeAppointment} />
-
-     
-
+        <Route exact path="/" component={Homepage} />
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Login" component={Login} />
-
         <Route exact path="/SignOut" component={SignOut} />
 
-        <PrivateRouting>
-        <Route exact path="/All" component={AllCustomers} />
-        
-        </PrivateRouting>
+  <PrivateRouting>
+    <Route exact path="/All" component={AllCustomers} />
+    <Route exact path="/MakeAppointment" component={MakeAppointment} />
+  </PrivateRouting>
 
       </Switch>
 

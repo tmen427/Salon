@@ -6,7 +6,20 @@ const app = express();
 const bodyParser = require("body-parser");
 const passport = require('passport');
 require("./Appointment/Login/Passport")(passport);
+
+
+
+
+
 var cookieParser = require('cookie-parser')
+
+//to  protect against csrf attacks include this: 
+//var csrf = require('csurf');
+
+
+
+
+
 
 
 //browser wil block since the server and frontend are on different ports-YOU MUST INLCUDE THIS IN DEVELOPMENTAL MODE
@@ -41,7 +54,6 @@ app.use(passport.initialize());
 
 
 app.use(require("./Appointment/Appointment_Routes.js")); 
-
 
 
 
