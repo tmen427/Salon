@@ -1,6 +1,6 @@
 const db = require("../db");
 var jwt = require('jsonwebtoken');
-var csrf = require('csurf')
+
 
 
 
@@ -77,13 +77,10 @@ const postSignUp = (req,res) => {
 
 // in order to protect from csrf attacks this is needed
 const forms = ( (req, res) => {
-  // res.cookie('XSRF-TOKEN', req.csrfToken())
-  // res.render('send', { csrftoken: req.csrfToken() }); 
-
   //send the CSRF token to the frontend
   res.json(req.csrfToken())
   //console.log(req.csrfToken());
-  //console.log('csrf should be made')
+  console.log('csrf token has been made')
  
   }
   ) 
@@ -95,7 +92,7 @@ const login = (req, res)=> {
  
    console.log(req.body)
   // just put the email in our token for now-change in the future...
-  const payload = { email: req.user.email, role: 'admin'};
+   const payload = { email: req.user.email, role: 'admin'};
 
    // our webtoken will be created with an email in the object, in the future use private key instead of just 'shhhhh'
    var token = jwt.sign(payload , 'shhhhhh'); 
@@ -112,7 +109,7 @@ const users = (req,res) => {
     var token = req.cookies.token; 
     
     try {
-      // verify makes sure that the token hasn't expired and has been issued by us
+      // verify makes sure that the token has not expired and has been issued by us by checking the 'shhhhhh'
       var decoded = jwt.verify(token, 'shhhhhh');
       
       // send to the frontend-IS THIS BAD PRACTISE? 
@@ -129,9 +126,10 @@ const users = (req,res) => {
 
 
 const SignOut = (req,res) => {
+  //to get ride of a cookie make it expire
   res.cookie('token',  { expires: new Date(Date.now()), httpOnly: true })
-   res.json(null);
- console.log("the token should now be expired ")
+  res.json(null);
+  console.log("the cookie(token) should now be expired ")
 
 }
    

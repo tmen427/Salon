@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 
-
-
-
 import "./login.styles.css";
 
 const Login = ()=>  {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
- const [csrfform, setcsrfform] = useState(""); 
+  const [csrfform, setcsrfform] = useState(""); 
 
   
  useEffect(
@@ -30,26 +27,10 @@ const Login = ()=>  {
             };
             fetchData();
   },  [],
-)
-
-//console.log(csrfform);
-
-  //fetch('/process', {
-    //credentials: 'same-origin', // <-- includes cookies in the request
-    //headers: {
-      //'CSRF-Token': token // <-- is the csrf token as a header
-   // },
-
-//)
+ )
 
 
-
-
-
-
-
-
-  function validateForm() {
+function validateForm() {
     return username.length > 0 && password.length > 0;
   }
   const handleChange = event => {
@@ -108,13 +89,13 @@ fetch("/api/login", {
   })
   .catch(function(err) {
     console.log(err);
-  //  alert(err + " the app may crash ");
+ 
   })
   ;
 
 
 
-//clear form
+//clear the form
 setUsername("");
 setPassword("");
 }
