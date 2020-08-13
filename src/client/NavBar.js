@@ -40,14 +40,25 @@ function NavBar () {
 
 return (
 
+  <div>
 
-<Navbar bg="primary" variant="dark">
- 
-    <Navbar.Brand href="/"> {users}</Navbar.Brand>
+<Navbar bg="" variant="" style={{background: "pink"}}>
+   <Navbar.Brand> <i>Leave your stressful work behind and enjoy happy time with us! </i>  </Navbar.Brand>
+   <Nav className="mr-auto">     
+  </Nav>
+ </Navbar>
+
+
+
+
+<Navbar bg="white" variant="white">
+   
+     
+    <Navbar.Brand href="/">  <img src="images/belle.jpeg" width="75px" height="75px"></img>  {users} </Navbar.Brand>
     <Nav className="mr-auto">
-    <Nav.Link href="/">Home</Nav.Link>
+    <Nav.Link href="/">Home </Nav.Link>
     <Nav.Link href="/MakeAppointment">Make Appointment</Nav.Link>
-
+   
 
 
  
@@ -68,7 +79,7 @@ return (
 
     </Nav>
   </Navbar>
-
+  </div>
 
 )
 }
