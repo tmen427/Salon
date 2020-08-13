@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from 'react';
-//import {  from 'react-bootstrap';
 
-
+import {Carousel} from 'react-bootstrap'; 
+import hands from "./images/hands.jpg"
+import inside from "./images/inside.jpg"; 
 
 
 
@@ -9,14 +10,51 @@ const Homepage  = () => {
 
 
 return (
+  <div>
 
-    <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">La Belle Nail Salon </h1>
+            <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={hands}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      
+    
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={hands}
+      alt="Third slide"
+    />
 
-    <p class="lead">Make Appointment and Total Customers are private routes. Must signup in order to have get access </p>
-  </div>
-            </div>
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={hands}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+
+
+</div>
+
+
+
 )
 
 
