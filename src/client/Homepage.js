@@ -2,7 +2,8 @@ import React, { useState, useEffect} from 'react';
 
 import {Carousel} from 'react-bootstrap'; 
 import hands from "./images/hands.jpg"
-import inside from "./images/inside.jpg"; 
+import pedicure from "./images/pedicure.jpg"; 
+import manicure from "./images/manicure.jpg";
 
 
 
@@ -27,7 +28,7 @@ return (
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={hands}
+      src={pedicure}
       alt="Third slide"
     />
 
@@ -39,7 +40,7 @@ return (
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={hands}
+      src={manicure}
       alt="Third slide"
     />
 
