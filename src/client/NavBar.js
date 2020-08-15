@@ -42,13 +42,19 @@ return (
 
   <div>
 
-<Navbar bg="" variant="" style={{background: "pink"}}>
-   <Navbar.Brand> <i>Leave your stressful work behind and enjoy happy time with us! </i>  </Navbar.Brand>
-   <Nav className="mr-auto">     
-  </Nav>
- </Navbar>
 
 
+<div  style={{background:"pink", height: "50px", padding: "10px"}}>
+<div class="row">
+    <div class="col" style={{textAlign: "center"}}>
+     <h2>  <i> Come Visit Us Soon!</i>  </h2>
+    </div>
+  
+
+
+   </div>
+
+   </div>
 
 
 <Navbar bg="white" variant="white">

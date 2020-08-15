@@ -6,6 +6,8 @@ import pedicure from "./images/pedicure.jpg";
 import manicure from "./images/manicure.jpg";
 import belle from "./images/labelle.jpg";
 
+import "./homepage.css";
+
 
 
 const Homepage  = () => {
@@ -68,18 +70,42 @@ return (
     </div>
     <div class="col-xl">
     <img src={belle} class="img-fluid" alt="Responsive image"></img>
-    <h1 style={{background: "black", textAlign: "center", color:"white"}}>Wax</h1>
+    <h1 style={{background: "black", textAlign: "center", color:"white"}}>Hand Designs</h1>
   
     </div>
   </div>
 </div>
-
-
-
-
 </div>
 
+<footer class="footer">
+<div class="container">
+<div class="row">
+    <div class="col">
 
+    ABOUT US
+    <p>
+  Our implements are medically sterilized and disinfected after each use.
+  Buffers and files are used only once then discarded. All pedicure procedures are done with liner protection.
+  And above all, staffs are trained to follow a proper sanitization protocol that puts 
+  clients hygiene as the number one priority.
+  </p>
+    </div>
+    <div class="col">
+    BUSINESS HOURS
+    <p>
+Monday	10:00 am - 7:00 pm
+Tuesday	10:00 am - 7:00 pm
+Wednesday	10:00 am - 7:00 pm
+Thursday	10:00 am - 7:00 pm
+Friday	9:30 am - 7:30 pm
+Saturday	9:30 am - 6:30 pm
+Sunday	Closed
+</p>
+    </div>
+  </div>
+
+</div>
+</footer>
 
 
 
