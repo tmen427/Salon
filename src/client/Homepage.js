@@ -36,8 +36,8 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -48,29 +48,29 @@ return (
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+ 
+
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
 
 
 <div style={{background:"violet"}}>
-<h1 style={{textAlign: "center", padding: "40px" }}>Our Services</h1>
+<h1 style={{textAlign: "center", padding: "60px", fontSize:"50px" }}>Our Services</h1>
 <div class="container" style={{padding: "40px 40px 100px 40px"}}>
   <div class="row">
     <div class="col-xl">
 
       <img src={belle} class="img-fluid" alt="Responsive image"></img>
-      <h1 style={{background: "black", textAlign: "center", color:"white"}}>Pedicure</h1>
+      <h1 style={{background: "purple", textAlign: "center", color:"white"}}>Pedicure</h1>
     </div>
     <div class="col-xl">
     <img src={belle} class="img-fluid" alt="Responsive image"></img>
-    <h1 style={{background: "black", textAlign: "center", color:"white"}}>Manicure</h1>
+    <h1 style={{background: "purple", textAlign: "center", color:"white"}}>Manicure</h1>
     </div>
     <div class="col-xl">
     <img src={belle} class="img-fluid" alt="Responsive image"></img>
-    <h1 style={{background: "black", textAlign: "center", color:"white"}}>Waxing</h1>
+    <h1 style={{background: "purple", textAlign: "center", color:"white"}}>Waxing</h1>
   
     </div>
   </div>
