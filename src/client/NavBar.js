@@ -48,7 +48,7 @@ return (
     <Navbar.Brand href="/">  <img src="images/belle.jpeg" width="75px" height="75px"></img>  </Navbar.Brand>
     <Nav className="mr-auto">
     <Nav.Link href="/">Home </Nav.Link>
-    <Nav.Link href="/MakeAppointment">Make Appointment</Nav.Link>
+    <Nav.Link href="/MakeAppointment">Book Appointment</Nav.Link>
     <Nav.Link href="/All">Total Customers</Nav.Link>
     <Nav.Link href="/">Pricing</Nav.Link>
  

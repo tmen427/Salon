@@ -55,7 +55,7 @@ return (
 </Carousel>
 
 
-<div style={{background:"violet"}}>
+<div >
 <h1 style={{textAlign: "center", padding: "60px", fontSize:"50px" }}>Our Services</h1>
 <div class="container" style={{padding: "40px 40px 100px 40px"}}>
   <div class="row">
