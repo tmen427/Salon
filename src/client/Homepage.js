@@ -5,7 +5,7 @@ import hands from "./images/hands.jpg"
 import pedicure from "./images/pedicure.jpg"; 
 import manicure from "./images/manicure.jpg";
 import belle from "./images/labelle.jpg";
-import i from "./images/i.jpg"; 
+import inside from "./images/inside.jpg"; 
 
 import "./homepage.css";
 
@@ -17,11 +17,34 @@ const Homepage  = () => {
 return (
   <div>
 
-<img
-      className="d-block w-100"
-      src={hands}
-      alt="First slide"
-/>
+
+
+<div style={{background:"purple", width:"100%", height: "500px", padding: "100px"}}>
+<div class="row">
+    <div class="col">
+
+  
+   <h1>Come visit us! </h1>
+   <p style={{fontSize: "20px", overflow: "auto"}}>
+ <h3>Store Hours: </h3> 
+Monday	10:00 am - 7:00 pm<br></br>
+Tuesday	10:00 am - 7:00 pm<br></br>
+
+Wednesday	10:00 am - 7:00 pm<br></br>
+Thursday	10:00 am - 7:00 pm<br></br>
+Friday	9:30 am - 7:30 pm<br></br>
+Saturday	9:30 am - 6:30 pm<br></br>
+Sunday	Closed
+  </p>
+    </div>
+    <div class="col">
+<img src={inside} className="img-fluid" style={{marginLeft: "80px", maxWidth: "500px", maxHeight: "500px"}} ></img>
+    </div>
+  </div>
+
+</div>
+
+
 
 
 <div>
