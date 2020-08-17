@@ -82,7 +82,7 @@ return (
 </div>
 </div>
 
-<footer class="footer">
+<footer class="footer" style={{padding: "30px"}}>
 <div >
 <div class="row">
    
@@ -96,6 +96,13 @@ Thursday	10:00 am - 7:00 pm  <br></br>
 Friday	9:30 am - 7:30 pm   <br></br>
 Saturday	9:30 am - 6:30 pm  <br></br>
 Sunday	Closed
+</p>
+       </div>
+
+       <div class="col">
+    Google maps iframe here in future?
+    <p>
+<img src={belle} style={{width:"300px", height:"200px"}}></img>
 </p>
        </div>
        
