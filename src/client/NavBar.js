@@ -46,8 +46,9 @@ return (
    
      
     <Navbar.Brand href="/">  <img src="images/belle.jpeg" width="75px" height="75px"></img>  </Navbar.Brand>
-    <Nav className="mr-auto">
+    <Nav className="mr-auto" style={{textAlign: "center"}}>
     <Nav.Link href="/">Home </Nav.Link>
+    
     <Nav.Link href="/MakeAppointment">Book Appointment</Nav.Link>
     <Nav.Link href="/All">Total Customers</Nav.Link>
     <Nav.Link href="/Pricing">Pricing</Nav.Link>
@@ -55,7 +56,7 @@ return (
 
 
       {users ?  null:
-       <Nav.Link href="/SignUp" >Sign-Up </Nav.Link> }
+       <Nav.Link href="/SignUp" style={{float: "right"}} >Sign-Up </Nav.Link> }
 
       {users ? <Nav.Link href="/SignOut"><b> {users} SIGN OUT</b></Nav.Link>
       :  <Nav.Link href="/Login">Login</Nav.Link>
