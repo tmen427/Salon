@@ -1,10 +1,11 @@
 import React, { useState, useEffect} from 'react';
 
-import {Carousel} from 'react-bootstrap'; 
+import {Carousel, Jumbotron, Container} from 'react-bootstrap'; 
 import hands from "./images/hands.jpg"
 import pedicure from "./images/pedicure.jpg"; 
 import manicure from "./images/manicure.jpg";
 import belle from "./images/labelle.jpg";
+import i from "./images/i.jpg"; 
 
 import "./homepage.css";
 
@@ -16,60 +17,28 @@ const Homepage  = () => {
 return (
   <div>
 
-            <Carousel>
-  <Carousel.Item>
-    <img
+<img
       className="d-block w-100"
       src={hands}
       alt="First slide"
-    />
-    <Carousel.Caption>
-      
-    
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={pedicure}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-    
-
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={manicure}
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
- 
-
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
+/>
 
 
-<div >
+<div>
 <h1 style={{textAlign: "center", padding: "60px", fontSize:"50px" }}>Our Services</h1>
 <div class="container" style={{padding: "40px 40px 100px 40px"}}>
   <div class="row">
-    <div class="col-xl">
+    <div class="col-sm">
 
-      <img src={belle} class="img-fluid" alt="Responsive image"></img>
+      <img src={manicure} className="img-fluid " alt="Responsive image"></img>
       <h1 style={{background: "purple", textAlign: "center", color:"white"}}>Pedicure</h1>
     </div>
     <div class="col-xl">
-    <img src={belle} class="img-fluid" alt="Responsive image"></img>
+    <img src={pedicure} class="img-fluid" alt="Responsive image"></img>
     <h1 style={{background: "purple", textAlign: "center", color:"white"}}>Manicure</h1>
     </div>
     <div class="col-xl">
-    <img src={belle} class="img-fluid" alt="Responsive image"></img>
+    <img src={hands} class="img-fluid" alt="Responsive image"></img>
     <h1 style={{background: "purple", textAlign: "center", color:"white"}}>Waxing</h1>
   
     </div>

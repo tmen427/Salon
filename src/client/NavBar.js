@@ -50,7 +50,7 @@ return (
     <Nav.Link href="/">Home </Nav.Link>
     <Nav.Link href="/MakeAppointment">Book Appointment</Nav.Link>
     <Nav.Link href="/All">Total Customers</Nav.Link>
-    <Nav.Link href="/">Pricing</Nav.Link>
+    <Nav.Link href="/Pricing">Pricing</Nav.Link>
  
 
 

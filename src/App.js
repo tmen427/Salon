@@ -11,6 +11,7 @@ import Login from "./client/login/login.component";
 import SignOut from "./client/SignOut"; 
 import Homepage from "./client/Homepage"; 
 import PrivateRouting from './client/PrivateRouting';
+import Pricing from "./client/Pricing";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/SignOut" component={SignOut} />
+        <Route exact path="/Pricing" component={Pricing} />
+
 
   <PrivateRouting>
     <Route exact path="/All" component={AllCustomers} />
