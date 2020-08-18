@@ -40,7 +40,7 @@ function NavBar () {
 
 return (
 
-  <div>
+  <div style={{backgroundColor:"purple"}}>
 
 <Navbar bg="white" variant="white" style={{fontSize:"20px"}}>
    
@@ -53,7 +53,7 @@ return (
     <Nav.Link href="/All">Total Customers</Nav.Link>
     <Nav.Link href="/Pricing">Pricing</Nav.Link>
  
-
+   
 
       {users ?  null:
        <Nav.Link href="/SignUp" style={{float: "right"}} >Sign-Up </Nav.Link> }

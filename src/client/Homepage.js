@@ -48,13 +48,7 @@ return (
 </Carousel>
 
 
-
-
-
-
-
-
-<div>
+<div style={{background: "purple"}}>
 <h1 style={{textAlign: "center", padding: "60px", fontSize:"50px",fontWeight:"700" }}>Our Services</h1>
 <div  style={{padding: "40px 40px 100px 40px"}}>
   <div class="row">
@@ -80,6 +74,39 @@ return (
 
   </div>
 </div>
+</div>
+
+
+
+
+
+<div>
+<h1 style={{textAlign: "center", padding: "60px", fontSize:"50px",fontWeight:"700" }}>About Us</h1>
+
+
+<div  style={{padding: "40px 40px 100px 40px", backgroundColor:"purple"}}>
+
+  
+  <div class="row">
+    <div class="col" style={{textAlign: "center", color:"white"}}>
+    Better Nails, Better Life.
+
+OUR STORY.
+Welcome to La Belle Nail Spa where customers come first and your comfort and safety are our top priority.
+
+At La Belle Nail Spa, all our metal tools are cleaned after each client and cleaned thoroughly each day. We are using the best EPA-grade disinfectant solutions and the top hospital-grade heat sterilizers. All the treatments take step-by-step with strict implementation of sanitation by the IDFPR guidelines to ensure our clients’ safety.
+    
+    
+    
+    </div>
+    <div class="col">
+      <img src={belle} className="img-fluid " style={{width: "500px", height: "300px"}}></img>
+    </div>
+  </div>
+
+
+</div>
+
 </div>
 
 <footer class="footer" style={{padding: "30px"}}>
