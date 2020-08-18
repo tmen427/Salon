@@ -62,9 +62,9 @@ return (
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt=""></img>
+            <img src={belle}class="menu-img" alt=""></img>
             <div class="menu-content">
-              <a href="#">Lobster Bisque</a><span>$5.95</span>
+              <a href="#">Extra Callus Removal</a><span>$10</span>
             </div>
             <div class="menu-ingredients">
               Lorem, deren, trataro, filede, nerada

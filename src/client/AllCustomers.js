@@ -37,12 +37,13 @@ return (
 
 <div>
 
-<div class="container py-5">
+<div class="container py-5" >
     <h1>Total Customers: {Customers.length}</h1>
 </div>
 
 
-<div  class="container py-5">
+<div  class="container py-5" style={{backgroundColor: "white"}}>
+
 <Table striped bordered hover size="sm">
   <thead>
     <tr>
