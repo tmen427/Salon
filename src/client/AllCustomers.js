@@ -35,8 +35,9 @@ const [Customers, setCustomers] = useState([]);
 
 return (
 
-<div>
+<div >
 
+<section class="inner-page">
 <div class="container py-5" >
     <h1>Total Customers: {Customers.length}</h1>
 </div>
@@ -84,7 +85,7 @@ return (
 </Table>
 </div>
 
-
+</section>
 
 </div>
 
