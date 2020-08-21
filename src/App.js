@@ -12,6 +12,7 @@ import SignOut from "./client/SignOut";
 import Homepage from "./client/Homepage"; 
 import PrivateRouting from './client/PrivateRouting';
 import Pricing from "./client/Pricing";
+import Footer from "./client/Footer";
 
 function App() {
   return (
@@ -35,7 +36,10 @@ function App() {
 
       </Switch>
 
+  
+  <Footer />
   </div>
+
 </BrowserRouter>
 
   )
