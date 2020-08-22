@@ -5,7 +5,8 @@ module.exports = function(passport) {
     passport.use(new LocalStrategy({usernameField: 'email', passwordField: 'password'},
         (email, password, done) => {
             try {
-                connection.query("SELECT * from signin where email = ?", [email], (err, user) => {
+                connection.query("SELECT * from signin where email = ? AND password = ?", [email, password], (err, user) => {
+            
                     if (err) {
                         console.error(`Error while fetching user from DB: ${err}`);
                         return done(err);
@@ -19,6 +20,7 @@ module.exports = function(passport) {
                         return done(null, user[0]);
                     }
                 });
+              
             } catch (e) {
                 console.error((`error: ${typeof e}`));
             }
