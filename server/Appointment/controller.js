@@ -112,13 +112,15 @@ const users = (req,res) => {
       // verify makes sure that the token has not expired and has been issued by us by checking the 'shhhhhh'
       var decoded = jwt.verify(token, 'shhhhhh');
       
-      // send to the frontend-IS THIS BAD PRACTISE? 
+      // send to the frontend-IS THIS BAD PRACTISE?
+	console.log('you this is the user route');
+	console.log(decoded.email);  
       res.json(decoded.email); 
     
       next();
     } catch (err) {
       // you will get and error if jwt.verify function is empty
-     // console.log('jwt.verify is trying to empty string in controller.js file-okay to ignore this error')
+      console.log('jwt.verify is trying to empty string in controller.js file-okay to ignore this error')
      }
 
 }

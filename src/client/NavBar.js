@@ -15,7 +15,7 @@ function NavBar () {
               const fetchData = async () => {
                   try {
 
-                  const res = await fetch("/users");
+                  const res = await fetch("/api/users");
          
                     const data = await res.json();
                     setUsers(data);

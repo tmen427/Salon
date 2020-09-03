@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 const bodyParser = require("body-parser");
 const passport = require('passport');
-require("./Appointment/Login/Passport")(passport);
+ require("./Appointment/login/Passport")(passport);
 
 
 
@@ -46,11 +46,11 @@ app.use(cookieParser());
 // }));
 
 app.use(passport.initialize());
-//app.use(passport.session());
+app.use(passport.session());
 
 
 
-
+//require("./Appointment/login/Passport")(passport); 
 
 
 app.use(require("./Appointment/Appointment_Routes.js")); 

@@ -5,14 +5,14 @@ module.exports = function(passport) {
     passport.use(new LocalStrategy({usernameField: 'email', passwordField: 'password'},
         (email, password, done) => {
             try {
-                connection.query("SELECT * from signin where email = ? AND password = ?", [email, password], (err, user) => {
+                connection.query("SELECT * from SignIn where email = ? ", [email], (err, user) => {
             
                     if (err) {
                         console.error(`Error while fetching user from DB: ${err}`);
                         return done(err);
                     } else if (Object.keys(user).length === 0) {
                         console.log(`${email} not found`);
-             
+             		console.log(`${user}`); 
                        
                         return done(null, false);
                     } else {

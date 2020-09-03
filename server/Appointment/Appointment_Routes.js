@@ -22,23 +22,24 @@ var parseForm = bodyParser.urlencoded({ extended: false })
 
 
 // you must include csrfProtection below, it will check if you have a valid csrf cookie....
-router.post("/api/login", parseForm, csrfProtection, passport.authenticate('local'), controller.login); 
+router.post("/api/login",parseForm, csrfProtection, passport.authenticate('local'), controller.login); 
 
 
 
 
 
 //router.use(csrfProtection); 
-router.get("/form", csrfProtection, controller.forms);
+
+router.get("/api/form", csrfProtection, controller.forms);
 
 
 
 
 //check if you are logged in and also if you have the correct jwt token
-router.get("/users",  controller.users); 
+router.get("/api/users",  controller.users); 
 
 // signout by causing the JWT to expire 
-router.get("/SignOut", controller.SignOut); 
+router.get("/api/SignOut", controller.SignOut); 
 
 
 

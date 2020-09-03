@@ -14,7 +14,7 @@ const [removeUsers, setremoveUsers] = useState("");
                 const fetchData = async () => {
                     try {
   
-                    const res = await fetch("/SignOut");
+                    const res = await fetch("/api/SignOut");
            
                       const data = await res.json();
                       setremoveUsers(data);

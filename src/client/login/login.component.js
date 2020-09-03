@@ -15,7 +15,7 @@ const Login = ()=>  {
           const fetchData = async () => {
               try {
 
-              const res = await fetch("/form");
+              const res = await fetch("/api/form");
      
                 const data = await res.json();
                 setcsrfform(data);
