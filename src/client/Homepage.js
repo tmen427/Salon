@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 
 import {Carousel, Jumbotron, Container} from 'react-bootstrap'; 
 import hands from "./images/hands.jpg"
@@ -9,9 +9,16 @@ import inside from "./images/inside.jpg";
 
 import "./homepage.css";
 
-
+import $ from "jquery";
 
 const Homepage  = () => {
+
+
+
+
+
+
+
 
 
 return (
@@ -19,16 +26,13 @@ return (
    
   {/* ======= Hero Section ======= */}
   <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+    <div class="container position-relative text-center text-lg-left" >
       <div class="row">
         <div class="col-lg-8">
           <h1>Welcome to <span>La Belle </span></h1>
           <h2>Delivering great service for more than 18 years!</h2>
 
-          <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Services</a>
-            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book an Appointment</a>
-          </div>
+       
         </div>
     
 
@@ -39,16 +43,16 @@ return (
 
 {/*About me*/}
   <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-6 order-1 order-lg-2" >
             <div class="about-img">
               <img src={inside} alt=""></img>
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Abut Us</h3>
+            <h3>About Us</h3>
             <p class="font-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
@@ -72,14 +76,14 @@ return (
 
     {/* ======= Menu Section ======= */}
     <section id="menu" class="menu section-bg">
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <div class="section-title">
           <h2>Services</h2>
           <p>Check Out Our Services</p>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" >
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="menu-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -90,7 +94,7 @@ return (
           </div>
         </div>
 
-        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row menu-container">
 
           <div class="col-lg-6 menu-item filter-starters">
             <img src={belle}class="menu-img" alt=""></img>
@@ -190,14 +194,14 @@ return (
 
     <section id="book-a-table" class="book-a-table">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <div class="section-title">
           <h2>Reservation</h2>
           <p>Book a Service</p>
         </div>
 
-        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" >
           <div class="form-row">
             <div class="col-lg-4 col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -242,7 +246,7 @@ return (
 
    {/* ======= Contact Section ======= */}
     <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <div class="section-title">
           <h2>Contact</h2>
@@ -250,12 +254,12 @@ return (
         </div>
       </div>
  
-      <div data-aos="fade-up">
+      <div >
        
         <iframe style={{border:"0", width: "100%", height: "350px"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.9028501296198!2d-93.1909030844795!3d44.80316848532704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f631e331ab0459%3A0x6d799632aaa856d3!2sLa%20Belle%20Nail%20%26%20Spa!5e0!3m2!1sen!2sus!4v1597874032630!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
       </div>
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <div class="row mt-5">
 
@@ -339,7 +343,7 @@ return (
 
 
 
-  <div id="preloader"></div>
+
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
 
