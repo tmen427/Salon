@@ -179,15 +179,7 @@ return (
 
 <div>
  
-<div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex">
-      <div class="contact-info mr-auto">
-        <i class="icofont-phone"></i> 651-452-8090
-        <span class="contact-info mr-auto"><i class="icofont-clock-time icofont-rotate-180"></i> Mon-Fri: 10:00 AM - 8:00 PM Sat: 9:00 AM - 6:00 PM Sun: 12-5 PM</span>
-      </div>
-   
-    </div>
-  </div>
+
 
 
   <header id="header" class="fixed-top">
@@ -198,11 +190,11 @@ return (
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="/">HOME</a></li>
-          <li><a href="/MakeAppointment">Booking</a></li>
-          <li><a href="/All">Total Customers</a></li>
-          {users ? null:  <li><a href="/SignUp">Sign-Up</a></li> }
+          <li><a href="/MakeAppointment">BOOKING</a></li>
+          <li><a href="/All">TOTAL CUSTOMER</a></li>
+          {users ? null:  <li><a href="/SignUp">SIGN-UP</a></li> }
           {users ?  <li><a href="/SignOut">{users} SIGNOUT</a></li> :
-           <li><a href="/Login">{users} Login</a></li>}
+           <li><a href="/Login">{users} LOGIN</a></li>}
 
         
 

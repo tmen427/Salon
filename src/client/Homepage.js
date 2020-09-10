@@ -32,6 +32,13 @@ return (
           <h1>Welcome to <span>La Belle </span></h1>
           <h2>Delivering great service for more than 18 years!</h2>
 
+          <div class="contact-info mr-auto">
+        <i class="icofont-phone"></i> 651-452-8090   <br></br>
+        <span class="contact-info mr-auto"><i class="icofont-clock-time icofont-rotate-180"></i> Mon-Fri: 10:00 AM - 8:00 PM Sat: 9:00 AM - 6:00 PM Sun: 12-5 PM</span>
+      </div>
+
+
+
        
         </div>
     

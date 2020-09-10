@@ -122,6 +122,12 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(28, 28, 8, 0.6);
 }
 
+
+
+
+
+  
+
 #topbar.topbar-scrolled {
   top: -40px;
 }
@@ -171,8 +177,8 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(12, 11, 9, 0.6);
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
-  top: 40px;
+  padding: 20px 0;
+
 }
 
 #header.header-scrolled {
