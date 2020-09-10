@@ -120,7 +120,7 @@ const users = (req,res) => {
       next();
     } catch (err) {
       // you will get and error if jwt.verify function is empty
-      console.log('jwt.verify is trying to empty string in controller.js file-okay to ignore this error')
+   //   console.log('jwt.verify is trying to empty string in controller.js file-okay to ignore this error')
      }
 
 }
