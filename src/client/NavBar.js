@@ -185,7 +185,7 @@ return (
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">La Belle Nail and Salon</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">La Belle Nails & Spa</a></h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
