@@ -1,14 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
 
 
 import belle from "./images/belle.jpeg";
 
 import $ from "jquery";
+import { findAllInRenderedTree } from 'react-dom/test-utils';
+
 
 
 function NavBar () {
   const [users, setUsers] = useState("");
+  const [Customers, setCustomers] = useState([]); 
+
+  const total = Customers.length; 
 
   useEffect(
       ()=> {
@@ -28,9 +33,26 @@ function NavBar () {
                 };
                 fetchData();
 
+
+                const fetchData1 = async () => {
+                  try {
+   //    const res = await fetch("http://localhost:5000/api/All_Customers");
+                  const res = await fetch("/api/All_Customers");
+         
+                    const data = await res.json();
+                    setCustomers(data)
+        
+                    } 
+                    catch (err) {
              
+                   throw new Error("Unable to fetch the customers");
+                 }
+                };
+               fetchData1();
 
+               
 
+        
 
 
                 var scrolltoOffset = $('#header').outerHeight() - 1;
@@ -65,7 +87,11 @@ function NavBar () {
                 });
 
 
+   
 
+          
+
+               // setTimeout(function(){ outsider(); }, 10000);
 
                 var scrolltoOffset = $('#header').outerHeight() - 1;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
@@ -153,26 +179,48 @@ function NavBar () {
                 } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
                   $(".mobile-nav, .mobile-nav-toggle").hide();
                 }
-         
-
-        
-
-
-
 
       },  [],
-
-
-
 
   )
 
 
-
-
-
-
 // jwt verify if if req.user form fetch setAuthenticated = true
+
+const [count, setCount] = useState(0);
+
+
+// hahaha it works!
+
+ useEffect(()=> {
+
+  if (Customers.length>0) {
+ if (localStorage.getItem("Original")===null) {
+  localStorage.setItem("Original", Customers.length);
+
+ } 
+  }
+
+ 
+})
+   console.log(localStorage.getItem("Original"));
+   
+ console.log(Customers.length)
+
+ var difference = Customers.length - localStorage.getItem("Original");
+ console.log('the differnece is '  + difference);
+
+function outsider () {
+  alert('yoyo');
+    console.log(Customers.length)
+  }
+
+
+
+
+
+
+
 
 
 return (
@@ -185,17 +233,20 @@ return (
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">La Belle Nails & Spa</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html"> La Belle Nails & Spa</a></h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">HOME</a></li>
-          <li><a href="/MakeAppointment">BOOKING</a></li>
-          <li><a href="/All">TOTAL CUSTOMER</a></li>
+          <li class="active"><a href="/">HOME </a></li>
+          <li><a href="/MakeAppointment">BOOKING   </a></li>
+          <li><a href="/All">TOTAL CUSTOMER *{difference}* NEW   </a></li>
           {users ? null:  <li><a href="/SignUp">SIGN-UP</a></li> }
           {users ?  <li><a href="/SignOut">{users} SIGNOUT</a></li> :
            <li><a href="/Login">{users} LOGIN</a></li>}
-
+  <div>
+      <h1>Now: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
         
 
         </ul>

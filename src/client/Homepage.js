@@ -14,9 +14,112 @@ import $ from "jquery";
 const Homepage  = () => {
 
 
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] =   useState(""); 
+  const [Phone, setPhone] = useState(""); 
+  const [Birthday, setBirthday] = useState(""); 
+  const [Email, setEmail] = useState(""); 
+  const [Notifications, setNotifactions] = useState(false); 
+  const [AppointmentDay, setAppointmentDay] = useState(""); 
+  const [AppointmentTime, setAppointmentTime] = useState("");
+  const [Notes, setNotes] = useState(""); 
+
+  function handleSubmit (event) {
+    var data = {
+       FirstName: firstName,
+       LastName: lastName, 
+       Phone:Phone,
+       Birthday:Birthday, 
+       Email:Email,
+       Notifications: Notifications,
+       AppointmentDay:AppointmentDay,
+       AppointmentTime: AppointmentTime,
+       Notes:Notes, 
+     }
+ console.log(data);
+ console.log("Alright i think the post worked!")
+ 
+  //console.log(props.route); 
+  fetch("/api/Appointments", {
+  //fetch("http://localhost:5000/api/post/Appointments", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+    .then(function(response) {
+      if (response.status >= 400) {
+      
+        throw new Error("Bad response from server");
+      }
+      return response.json();
+    })
+ 
+    .then(function(data) {
+      //  alert(data);
+ 
+      if (data === "success") {
+        console.log("thanks for submitting!");
+      }
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+ 
+     //this will clear the form after you submit
+    setfirstName("");
+    setlastName("");
+    setPhone("");
+    setBirthday("");
+    setEmail("");
+    setNotifactions(false);
+    setAppointmentDay("");
+    setAppointmentTime("");
+    setNotes("")
+ 
+ 
+   window.location.reload()
+  event.preventDefault();
+  event.target.reset(); 
+ }
 
 
 
+ function handleInputChange (event) {
+  const name = event.target.name;
+  const value = event.target.value; 
+
+ // console.log(`Name: ${name} Value: ${value}`); 
+  if (name==='firstname') {
+    setfirstName(value)
+  }
+  if (name==="lastname") {
+    setlastName(value)
+  }
+  if (name==='phone') {
+    setPhone(value)
+  }
+  if(name==='birthday') {
+    setBirthday(value)
+  }
+  if (name==='email') {
+    setEmail(value)
+  }  
+  if (value==='notificationTrue') {
+    setNotifactions(true)
+  }
+  if (value==='notificationsFalse') {
+    setNotifactions(false)
+  }
+  if (name==='appointmentDay') {
+    setAppointmentDay(value)
+  } 
+  if (name==='appointmentTime') {
+    setAppointmentTime(value)
+  }
+  if(name==='notes') {
+    setNotes(value)
+  }
+ }
 
 
 
@@ -65,7 +168,7 @@ return (
               magna aliqua.
             </p>
             <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="icofont-check-circled"></i> We are open during the pandemic. Feel free to stop by!</li>
               <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
               <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
             </ul>
@@ -94,8 +197,8 @@ return (
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="menu-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-starters">Starters</li>
-              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-starters">Pedicures</li>
+              <li data-filter=".filter-salads">Manicures</li>
               <li data-filter=".filter-specialty">Specialty</li>
             </ul>
           </div>
@@ -204,47 +307,69 @@ return (
       <div class="container" >
 
         <div class="section-title">
-          <h2>Reservation</h2>
+          <h2>Booking</h2>
           <p>Book a Service</p>
         </div>
 
-        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" >
+        <form onSubmit={handleSubmit} method="post" role="form" class="php-email-form" >
           <div class="form-row">
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              <input type="text" name="firstname" class="form-control" id="Firstname" onChange={handleInputChange} placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
+              <input type="text" name="lastname" class="form-control" id="Lastname" onChange= {handleInputChange} placeholder="Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+              <input type="email" class="form-control" name="email" id="email" onChange={handleInputChange} placeholder="Email" data-rule="email" data-msg="Please enter a valid email"/>
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+              <input type="text" class="form-control" name="phone" id="phone" onChange={handleInputChange} placeholder=" Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+              <input type="text" name="appointmentDay" class="form-control" id="date" onChange={handleInputChange} placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars"/>
+              <input type="text" class="form-control" name="appointmentTime" id="time" onChange={handleInputChange} placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
               <div class="validate"></div>
             </div>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+
+
+            <div class="col-lg-4 col-md-6 form-group">
+      <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" onChange={handleInputChange} id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type of Service
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Pedicure</a>
+        <a class="dropdown-item" href="#">Manicure </a>
+    <a class="dropdown-item" href="#">Spa</a>
+  </div>
+</div>
+</div>
+
+
+<div class="col-lg-8 col-md-6 form-group">
+            <div class="form-group">
+            <textarea class="form-control" name="notes" rows="5" onChange={handleInputChange} placeholder="Message"></textarea>
             <div class="validate"></div>
           </div>
+      </div> 
+       
+          </div>
+     
+
           <div class="mb-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Book a Table</button></div>
+          <div class="text-center"><button type="submit">Book Appointment</button></div>
+       
         </form>
 
       </div>
