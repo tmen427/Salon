@@ -187,7 +187,7 @@ function NavBar () {
 
 // jwt verify if if req.user form fetch setAuthenticated = true
 
-const [count, setCount] = useState(0);
+
 
 
 // hahaha it works!
@@ -195,25 +195,22 @@ const [count, setCount] = useState(0);
  useEffect(()=> {
 
   if (Customers.length>0) {
- if (localStorage.getItem("Original")===null) {
+  if (localStorage.getItem("Original")===null) {
   localStorage.setItem("Original", Customers.length);
-
- } 
+  } 
   }
-
- 
 })
    console.log(localStorage.getItem("Original"));
-   
- console.log(Customers.length)
+   console.log(Customers.length)
+   var difference = Customers.length - localStorage.getItem("Original");
+   console.log('the differnece is '  + difference);
 
- var difference = Customers.length - localStorage.getItem("Original");
- console.log('the differnece is '  + difference);
 
-function outsider () {
-  alert('yoyo');
-    console.log(Customers.length)
-  }
+
+
+   function clearlocal () {
+    localStorage.setItem("Original", Customers.length);
+}
 
 
 
@@ -238,15 +235,12 @@ return (
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="/">HOME </a></li>
-          <li><a href="/MakeAppointment">BOOKING   </a></li>
-          <li><a href="/All">TOTAL CUSTOMER *{difference}* NEW   </a></li>
+          <li><a href="/MakeAppointment" >BOOKING   </a></li>
+          <li><a href="/All" onClick={ ()=>{clearlocal()} }>TOTAL CUSTOMER *{difference}* NEW   </a></li>
           {users ? null:  <li><a href="/SignUp">SIGN-UP</a></li> }
           {users ?  <li><a href="/SignOut">{users} SIGNOUT</a></li> :
            <li><a href="/Login">{users} LOGIN</a></li>}
-  <div>
-      <h1>Now: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
+
         
 
         </ul>
