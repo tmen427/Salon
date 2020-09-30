@@ -30,7 +30,47 @@ const [Customers, setCustomers] = useState([]);
     )
     
 
+    
+    
+    
+    var total = Customers.length; 
+    console.log('the total is ' + total);
+   
+    // the  value localstorage.setItem is orignally set in the NavBar.js 
+    var getlocalstorageCustomers = localStorage.getItem("TotalCustomer"); 
+    var convert_local = parseInt(getlocalstorageCustomers); 
 
+    // set the total number of customers when you load the page
+    const [orginal_customers, set_original_customers] = useState(convert_local);
+     
+    var subtract = Customers.length-convert_local; 
+    console.log('subtracdt value is ' + subtract)
+   
+    useEffect(() => {
+    
+      const interval = setInterval(() => {
+      set_original_customers(calculate()); 
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+    
+
+
+  function calculate () {
+    
+    console.log('cool bro')
+    //if the total number customers appointment changes then refresh the page , use previous state...
+   // window.location.reload(); 
+    return  total-convert_local; 
+  }
+
+
+function clear () {
+  alert('updated local storage')
+  localStorage.setItem("TotalCustomer", total); 
+}
 
 
 return (
@@ -39,7 +79,8 @@ return (
 
 <section class="inner-page">
 <div class="container py-5" >
-    <h1>Total Customers: {Customers.length}</h1>
+    <h1>{total} Total Customers</h1>
+    <button onClick={()=>clear()}> {subtract} New Customers since last clear </button>
 </div>
 
 
@@ -78,12 +119,18 @@ return (
       <td>{items.appointmentTime}</td>
       <td>{items.notes}</td>
     </tr>
+
+
     )) }
    
   </tbody>
 
 </Table>
 </div>
+
+
+
+
 
 </section>
 

@@ -195,15 +195,16 @@ function NavBar () {
  useEffect(()=> {
 
   if (Customers.length>0) {
-  if (localStorage.getItem("Original")===null) {
+  if (localStorage.getItem("Original")===null ) {
   localStorage.setItem("Original", Customers.length);
+  localStorage.setItem("TotalCustomer", total); 
   } 
   }
 })
-   console.log(localStorage.getItem("Original"));
-   console.log(Customers.length)
+  // console.log(localStorage.getItem("Original"));
+  // console.log(Customers.length)
    var difference = Customers.length - localStorage.getItem("Original");
-   console.log('the differnece is '  + difference);
+  // console.log('the difference is '  + difference);
 
 
 
@@ -236,7 +237,7 @@ return (
         <ul>
           <li class="active"><a href="/">HOME </a></li>
           <li><a href="/MakeAppointment" >BOOKING   </a></li>
-          <li><a href="/All" onClick={ ()=>{clearlocal()} }>TOTAL CUSTOMER *{difference}* NEW   </a></li>
+          <li><a href="/All" onClick={ ()=>{clearlocal()} }>TOTAL CUSTOMER **NEW-{difference}   </a></li>
           {users ? null:  <li><a href="/SignUp">SIGN-UP</a></li> }
           {users ?  <li><a href="/SignOut">{users} SIGNOUT</a></li> :
            <li><a href="/Login">{users} LOGIN</a></li>}
