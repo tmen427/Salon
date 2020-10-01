@@ -194,7 +194,7 @@ function NavBar () {
 
  useEffect(()=> {
 
-  if (Customers.length>0) {
+  if (Customers.length>=0) {
   if (localStorage.getItem("Original")===null ) {
   localStorage.setItem("Original", Customers.length);
   localStorage.setItem("TotalCustomer", total); 
@@ -210,11 +210,19 @@ function NavBar () {
 
 
    function clearlocal () {
+
     localStorage.setItem("Original", Customers.length);
 }
 
 
+function home () {
 
+  if (window.location.href= 'http://localhost:3000/All') { 
+   // if your clicking from page http://localhost:3000/All, then goto the homepage then set a new localstorage value
+
+  localStorage.setItem("Original", Customers.length);
+}
+}
 
 
 
@@ -235,7 +243,7 @@ return (
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">HOME </a></li>
+          <li class="active"><a href="/" onClick={()=>home()}>HOME </a></li>
           <li><a href="/MakeAppointment" >BOOKING   </a></li>
           <li><a href="/All" onClick={ ()=>{clearlocal()} }>TOTAL CUSTOMER **NEW-{difference}   </a></li>
           {users ? null:  <li><a href="/SignUp">SIGN-UP</a></li> }

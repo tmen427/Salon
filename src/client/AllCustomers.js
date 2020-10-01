@@ -30,12 +30,13 @@ const [Customers, setCustomers] = useState([]);
     )
     
 
-    
+   
     
     
     var total = Customers.length; 
     console.log('the total is ' + total);
-   
+    const [total1, setTotal1] = useState(total)
+
     // the  value localstorage.setItem is orignally set in the NavBar.js 
     var getlocalstorageCustomers = localStorage.getItem("TotalCustomer"); 
     var convert_local = parseInt(getlocalstorageCustomers); 
@@ -46,12 +47,14 @@ const [Customers, setCustomers] = useState([]);
     var subtract = Customers.length-convert_local; 
     console.log('subtracdt value is ' + subtract)
    
+    
+    
+    
     useEffect(() => {
     
       const interval = setInterval(() => {
       set_original_customers(calculate()); 
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -59,8 +62,8 @@ const [Customers, setCustomers] = useState([]);
 
 
   function calculate () {
-    
-    console.log('cool bro')
+  
+
     //if the total number customers appointment changes then refresh the page , use previous state...
    // window.location.reload(); 
     return  total-convert_local; 
@@ -69,7 +72,9 @@ const [Customers, setCustomers] = useState([]);
 
 function clear () {
   alert('updated local storage')
+ 
   localStorage.setItem("TotalCustomer", total); 
+  window.location.reload(); 
 }
 
 

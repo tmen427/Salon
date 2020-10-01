@@ -6,7 +6,7 @@ var jwt = require('jsonwebtoken');
 
 
 const getCustomers = (req,res) => {
-    db.query('SELECT * from Appointments', (error, result)=> {
+    db.query('SELECT * from Appointments ORDER BY id DESC', (error, result)=> {
       if (error) {
         res.send(error); 
       }
