@@ -216,8 +216,8 @@ function NavBar () {
 
 
 function home () {
-
-  if (window.location.href= 'http://localhost:3000/All') { 
+      alert(window.location.href);
+  if (window.location.href==='http://localhost:3000/All') { 
    // if your clicking from page http://localhost:3000/All, then goto the homepage then set a new localstorage value
 
   localStorage.setItem("Original", Customers.length);
@@ -245,7 +245,7 @@ return (
         <ul>
           <li class="active"><a href="/" onClick={()=>home()}>HOME </a></li>
           <li><a href="/MakeAppointment" >BOOKING   </a></li>
-          <li><a href="/All" onClick={ ()=>{clearlocal()} }>TOTAL CUSTOMER **NEW-{difference}   </a></li>
+          <li><a href="/All" onClick={ ()=>{clearlocal()} }>TOTAL CUSTOME- NEW-{difference}   </a></li>
           {users ? null:  <li><a href="/SignUp">SIGN-UP</a></li> }
           {users ?  <li><a href="/SignOut">{users} SIGNOUT</a></li> :
            <li><a href="/Login">{users} LOGIN</a></li>}
