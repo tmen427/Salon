@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect} from 'react';
 
-import {Carousel, Jumbotron, Container} from 'react-bootstrap'; 
-import hands from "./images/hands.jpg"
-import pedicure from "./images/pedicure.jpg"; 
-import manicure from "./images/manicure.jpg";
+import {Dropdown, DropdownButton} from 'react-bootstrap'; 
+
 import belle from "./images/labelle.jpg";
 import inside from "./images/inside.jpg"; 
 
@@ -33,13 +31,14 @@ console.log(addspace)
 
 var with_comma = addspace.concat(addcomma);
 console.log(with_comma)
+
  const [showResults, setshowResults] = useState(false);
 
 
 const [AppointmentDay, setAppointmentDay] = useState(cutnumber); 
 
 
-
+  const [Service, setService] = useState("");
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] =   useState(""); 
   const [Phone, setPhone] = useState(""); 
@@ -117,7 +116,7 @@ alert(AppointmentDay)
   const value = event.target.value; 
 console.log(name)
 console.log(value)
-
+    
  // console.log(`Name: ${name} Value: ${value}`); 
   if (name==='firstname') {
     setfirstName(value)
@@ -142,7 +141,7 @@ console.log(value)
   }
   if (name==='appointmentDay') {
 
-    console.log(value)
+
 
     setAppointmentDay(value)
     console.log("line 162" + AppointmentDay)
@@ -158,19 +157,13 @@ console.log(value)
 useEffect(()=>setAppointmentDay(date), [date]); 
  
 
+
 function handleClick (event) {
 //alert('the date is ' + date )
 //alert("z handleclick is" + AppointmentDay)
       
  setshowResults(true)
 }  
-
-function handleClick1 (event) {
-  const name = event.target.name;
-  const value = event.target.value; 
-console.log(name)
-console.log(value)
-}
 
 
 //console.log('line 32' + showResults)
@@ -404,14 +397,14 @@ return (
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" class="form-control" name="phone" id="phone" onChange={handleInputChange} placeholder=" Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+              <input type="text" class="form-control" name="phone" id="phone" onChange={handleInputChange} placeholder="Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
      
              
     
-        <input  value={with_comma}   name="appointmentDay"  class="form-control" id="date"    placeholder="Date" onClick={handleClick}  />
+        <input  value={cutnumber}   name="appointmentDay"  class="form-control" id="date"    placeholder="Date " onClick={handleClick}  />
          { showResults  ?  <div><div><REACT_CALANDER /></div></div> : null}
 
              
@@ -419,24 +412,22 @@ return (
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" class="form-control" name="appointmentTime" id="time" onChange={handleInputChange} placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+              <input type="text" class="form-control" name="appointmentTime"  id="time" onChange={handleInputChange} placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
               <div class="validate"></div>
             </div>
-
-
             <div class="col-lg-4 col-md-6 form-group">
-      <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" onChange={handleInputChange} id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Type of Service
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Pedicure</a>
-        <a class="dropdown-item" href="#">Manicure </a>
-    <a class="dropdown-item" href="#">Spa</a>
-  </div>
-</div>
-</div>
+            
+            <label style={{color: "white"}}>
+          <h3 style={{text: "white !important"}}> Select a Service</h3>
+          <select name="typeofservice" onChange={handleInputChange}>
+          <option   ></option>
+            <option  value="pedicure" >Pedicure</option>
+            <option value="nails">Nails</option>
+            <option value="spa">Spa</option>
 
+          </select>
+        </label>
+</div>
 
 <div class="col-lg-8 col-md-6 form-group">
             <div class="form-group">
