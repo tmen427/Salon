@@ -21,10 +21,18 @@ const Homepage  = () => {
  //DO THE CONVERSION HERE!! BUT MAKE A CUSTOM HOOK FOR IT , WHAT DATE FORMAT ?
  const convertDate = String(date); 
  var cutString = convertDate.substr( convertDate.indexOf(" ")+1)
- //console.log(cutString)
+ console.log(cutString)
  var cutnumber = cutString.split(' ').slice(0, 3).join(' ');
- //console.log(cutnumber)
 
+ //console.log(cutnumber)
+var addcomma = cutnumber.split(' ').slice(1, 3).join(', '); 
+console.log(addcomma); 
+var addcomma1 = cutnumber.split(' ').slice(0,1).join(' ')
+var addspace = addcomma1 + " ";
+console.log(addspace)
+
+var with_comma = addspace.concat(addcomma);
+console.log(with_comma)
  const [showResults, setshowResults] = useState(false);
 
 
@@ -403,7 +411,7 @@ return (
      
              
     
-        <input  value={cutnumber}   name="appointmentDay"  class="form-control" id="date"    placeholder="Date" onClick={handleClick}  />
+        <input  value={with_comma}   name="appointmentDay"  class="form-control" id="date"    placeholder="Date" onClick={handleClick}  />
          { showResults  ?  <div><div><REACT_CALANDER /></div></div> : null}
 
              
