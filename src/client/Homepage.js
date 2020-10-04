@@ -15,8 +15,10 @@ import 'react-calendar/dist/Calendar.css';
 
 const Homepage  = () => {
 
-  //const [Date, setDate] = useState(new Date()); 
- const [date, setDate] = useState(new Date()); 
+//const [Date, setDate] = useState(new Date()); 
+
+ const [date, setDate] = useState(""); //makes the initial date value zero
+ //DO THE CONVERSION HERE!! BUT MAKE A CUSTOM HOOK FOR IT , WHAT DATE FORMAT ?
  const convertDate = String(date); 
  var cutString = convertDate.substr( convertDate.indexOf(" ")+1)
  //console.log(cutString)
@@ -26,7 +28,7 @@ const Homepage  = () => {
  const [showResults, setshowResults] = useState(false);
 
 
-const [AppointmentDay, setAppointmentDay] = useState(date); 
+const [AppointmentDay, setAppointmentDay] = useState(cutnumber); 
 
 
 
@@ -41,7 +43,8 @@ const [AppointmentDay, setAppointmentDay] = useState(date);
   const [Notes, setNotes] = useState(""); 
 
   function handleSubmit (event) {
-  alert(AppointmentDay)
+alert(AppointmentDay)
+
     var data = {
        FirstName: firstName,
        LastName: lastName, 
@@ -148,8 +151,8 @@ useEffect(()=>setAppointmentDay(date), [date]);
  
 
 function handleClick (event) {
-alert('the date is ' + date )
-alert("z handleclick is" + AppointmentDay)
+//alert('the date is ' + date )
+//alert("z handleclick is" + AppointmentDay)
       
  setshowResults(true)
 }  
@@ -179,10 +182,10 @@ function Dissapear () {
    // had to setshowResults in setTimeout because there was an error in react where setshowResults would change 
    //status before
   // now set a 'new appointmentday' THIS PART IS THE PROBLEM!
-  alert(date)
+ // alert(date)
   setAppointmentDay(date)
 
-  alert("inside dissapear" + AppointmentDay)
+//  alert("inside dissapear" + AppointmentDay)
 
 
    return setTimeout( function () {setshowResults(false)}, 1)
@@ -397,12 +400,12 @@ return (
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="appointmentDay" class="form-control" id="date" onChange={handleInputChange} placeholder="Date" data-msg="Please enter at least 4 chars"/>
+     
              
-              <div>
+    
         <input  value={cutnumber}   name="appointmentDay"  class="form-control" id="date"    placeholder="Date" onClick={handleClick}  />
          { showResults  ?  <div><div><REACT_CALANDER /></div></div> : null}
-      </div>
+
              
              
               <div class="validate"></div>
