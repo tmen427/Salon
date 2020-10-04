@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 
 import {Carousel, Jumbotron, Container} from 'react-bootstrap'; 
 import hands from "./images/hands.jpg"
@@ -9,9 +9,25 @@ import inside from "./images/inside.jpg";
 
 import "./homepage.css";
 
-import $ from "jquery";
+
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 const Homepage  = () => {
+
+  //const [Date, setDate] = useState(new Date()); 
+ const [date, setDate] = useState(new Date()); 
+ const convertDate = String(date); 
+ var cutString = convertDate.substr( convertDate.indexOf(" ")+1)
+ //console.log(cutString)
+ var cutnumber = cutString.split(' ').slice(0, 3).join(' ');
+ //console.log(cutnumber)
+
+ const [showResults, setshowResults] = useState(false);
+
+
+const [AppointmentDay, setAppointmentDay] = useState(date); 
+
 
 
   const [firstName, setfirstName] = useState("");
@@ -20,11 +36,12 @@ const Homepage  = () => {
   const [Birthday, setBirthday] = useState(""); 
   const [Email, setEmail] = useState(""); 
   const [Notifications, setNotifactions] = useState(false); 
-  const [AppointmentDay, setAppointmentDay] = useState(""); 
+
   const [AppointmentTime, setAppointmentTime] = useState("");
   const [Notes, setNotes] = useState(""); 
 
   function handleSubmit (event) {
+  alert(AppointmentDay)
     var data = {
        FirstName: firstName,
        LastName: lastName, 
@@ -87,6 +104,8 @@ const Homepage  = () => {
  function handleInputChange (event) {
   const name = event.target.name;
   const value = event.target.value; 
+console.log(name)
+console.log(value)
 
  // console.log(`Name: ${name} Value: ${value}`); 
   if (name==='firstname') {
@@ -111,7 +130,11 @@ const Homepage  = () => {
     setNotifactions(false)
   }
   if (name==='appointmentDay') {
+
+    console.log(value)
+
     setAppointmentDay(value)
+    console.log("line 162" + AppointmentDay)
   } 
   if (name==='appointmentTime') {
     setAppointmentTime(value)
@@ -121,7 +144,51 @@ const Homepage  = () => {
   }
  }
 
+useEffect(()=>setAppointmentDay(date), [date]); 
+ 
 
+function handleClick (event) {
+alert('the date is ' + date )
+alert("z handleclick is" + AppointmentDay)
+      
+ setshowResults(true)
+}  
+
+function handleClick1 (event) {
+  const name = event.target.name;
+  const value = event.target.value; 
+console.log(name)
+console.log(value)
+}
+
+
+//console.log('line 32' + showResults)
+
+const REACT_CALANDER = () => {
+         return (
+<div>
+   <Calendar
+   onChange={setDate}
+   value={date}   
+   onClickDay={()=> Dissapear()}
+   />
+</div>
+ )
+ }
+function Dissapear () {
+   // had to setshowResults in setTimeout because there was an error in react where setshowResults would change 
+   //status before
+  // now set a 'new appointmentday' THIS PART IS THE PROBLEM!
+  alert(date)
+  setAppointmentDay(date)
+
+  alert("inside dissapear" + AppointmentDay)
+
+
+   return setTimeout( function () {setshowResults(false)}, 1)
+ }
+
+ const [message, setMessage] = useState(""); 
 
 
 return (
@@ -330,7 +397,14 @@ return (
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="appointmentDay" class="form-control" id="date" onChange={handleInputChange} placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+              <input type="text" name="appointmentDay" class="form-control" id="date" onChange={handleInputChange} placeholder="Date" data-msg="Please enter at least 4 chars"/>
+             
+              <div>
+        <input  value={cutnumber}   name="appointmentDay"  class="form-control" id="date"    placeholder="Date" onClick={handleClick}  />
+         { showResults  ?  <div><div><REACT_CALANDER /></div></div> : null}
+      </div>
+             
+             
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
