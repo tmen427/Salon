@@ -8,8 +8,11 @@ CREATE TABLE if NOT EXISTS Appointments
 (id INT(6) AUTO_INCREMENT PRIMARY KEY,
 firstName VARCHAR(45), 
 lastName VARCHAR(45),
-
-
-
+phone VARCHAR(45), 
+birthday VARCHAR(45),
+email VARCHAR(45),
+notifications VARCHAR(45), 
+appointmentDay VARCHAR(100), 
+appointmentTime VARCHAR(45),
+notes VARCHAR(45)
 )
-,   phone, birthday,  email, notifications, appointmentDay, appointmentTime, notes
