@@ -100,6 +100,7 @@ return (
       <th>Email</th>
       <th>Birthday</th>
       <th>Phone</th>   
+      <th>Service Type</th>
       <th>Recieve Birthday Email</th>
       <th>Appointment Day</th>
       <th>AppointmentTime</th>
@@ -115,7 +116,8 @@ return (
       <td>{items.lastName}</td>
       <td>{items.email}</td>
       <td>{items.birthday}</td>
-      <td>{items.email}</td>
+      <td>{items.phone}</td>
+      <td>{items.servicetype}</td>
 
       {items.notifications===0? <td> No</td> : <td>Yes</td> }
 

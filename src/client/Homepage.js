@@ -50,7 +50,7 @@ const [AppointmentDay, setAppointmentDay] = useState(cutnumber);
   const [Notes, setNotes] = useState(""); 
 
   function handleSubmit (event) {
-alert(AppointmentDay)
+//alert(AppointmentDay)
 
     var data = {
        FirstName: firstName,
@@ -58,6 +58,7 @@ alert(AppointmentDay)
        Phone:Phone,
        Birthday:Birthday, 
        Email:Email,
+       ServiceType: servicetype, 
        Notifications: Notifications,
        AppointmentDay:AppointmentDay,
        AppointmentTime: AppointmentTime,
@@ -110,7 +111,7 @@ alert(AppointmentDay)
  }
 
 
-
+const [servicetype, setServicetype] = useState(""); 
  function handleInputChange (event) {
   const name = event.target.name;
   const value = event.target.value; 
@@ -125,7 +126,11 @@ console.log(value)
     setlastName(value)
   }
   if (name==='phone') {
+  
     setPhone(value)
+  }
+  if (name==='servicetype') {
+    setServicetype(value)
   }
   if(name==='birthday') {
     setBirthday(value)
@@ -417,9 +422,9 @@ return (
             </div>
             <div class="col-lg-4 col-md-6 form-group">
             
-            <label style={{color: "white"}}>
-          <h3 style={{text: "white !important"}}> Select a Service</h3>
-          <select name="typeofservice" onChange={handleInputChange}>
+            <label >
+          <div style={{color: "#cda45e", fontSize: '30px', fontWeight: "700", fontFamily: "Playfair Display", marginBottom: "20px"}} > Select a Service</div>
+          <select name="servicetype" onChange={handleInputChange}>
           <option   ></option>
             <option  value="pedicure" >Pedicure</option>
             <option value="nails">Nails</option>

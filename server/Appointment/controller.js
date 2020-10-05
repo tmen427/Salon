@@ -28,11 +28,11 @@ const postNewAppointments = (req,res)=> {
      const AppointmentDay = req.body.AppointmentDay;
      const AppointmentTime = req.body.AppointmentTime;
      const Notes = req.body.Notes; 
-  
+     const ServiceType = req.body.ServiceType;
 
 
-db.query('INSERT INTO Appointments (firstName, lastName,  phone, birthday,  email, notifications, appointmentDay, appointmentTime, notes) VALUES (?,?,?,?,?,?,?,?,?)' , 
-   [FirstName, LastName, Phone, Birthday, Email,Notifications, AppointmentDay, AppointmentTime,  Notes ],(error, result)=> {
+db.query('INSERT INTO Appointments (firstName, lastName,  phone, birthday,  email, notifications, appointmentDay, appointmentTime, notes,servicetype) VALUES (?,?,?,?,?,?,?,?,?,?)' , 
+   [FirstName, LastName, Phone, Birthday, Email,Notifications, AppointmentDay, AppointmentTime,  Notes, ServiceType ],(error, result)=> {
     if (error) {
       res.send(error);
       console.log(error); 
