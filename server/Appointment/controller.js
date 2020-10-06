@@ -6,7 +6,9 @@ var jwt = require('jsonwebtoken');
 
 
 const getCustomers = (req,res) => {
-    db.query('SELECT * from Appointments ORDER BY id DESC', (error, result)=> {
+ // SELECT * from Appointments ORDER BY id DESC
+  //SELECT * FROM Salon.Appointments ORDER BY appointmentDay DESC
+    db.query('SELECT * from Appointments ORDER BY lastName ASC', (error, result)=> {
       if (error) {
         res.send(error); 
       }
@@ -15,6 +17,23 @@ const getCustomers = (req,res) => {
       }
     })
   }
+
+
+  const getCustomersDates = (req,res) => {
+
+    // SELECT * from Appointments ORDER BY id DESC
+     //SELECT * FROM Salon.Appointments ORDER BY appointmentDay DESC
+       db.query('SELECT * FROM Appointments ORDER BY appointmentDay DESC', (error, result)=> {
+         if (error) {
+           res.send(error); 
+         }
+         else {
+           res.json(result)    
+         }
+       })
+     }
+
+
 
 const postNewAppointments = (req,res)=> {
    
@@ -138,6 +157,7 @@ const SignOut = (req,res) => {
 
    module.exports = {
     getCustomers,
+    getCustomersDates,
     postNewAppointments,
     getUsers,
     postSignUp, 

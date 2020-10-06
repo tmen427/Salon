@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 
 
 router.get("/api/All_Customers", controller.getCustomers)
+router.get("/api/All_CustomersDates", controller.getCustomersDates)
+
 
 router.post("/api/Appointments", controller.postNewAppointments); 
 

@@ -8,6 +8,9 @@ function AllCustomers () {
 
 
 const [Customers, setCustomers] = useState([]); 
+const [CustomersDates, setCustomersDates] = useState([]);
+const [ToggleArray, setToggleArray] = useState(Customers); 
+
     
     useEffect(
         ()=> {
@@ -18,6 +21,7 @@ const [Customers, setCustomers] = useState([]);
                     const res = await fetch("/api/All_Customers");
            
                       const data = await res.json();
+                   
                       setCustomers(data);
                       } 
                       catch (err) {
@@ -26,9 +30,39 @@ const [Customers, setCustomers] = useState([]);
                    }
                   };
                   fetchData();
-        },  [],
+        
+                  const fetchData1 = async () => {
+                    try {
+     //    const res = await fetch("http://localhost:5000/api/All_Customers");
+                    const res = await fetch("/api/All_CustomersDates");
+           
+                      const data = await res.json();
+                      setToggleArray(data)
+                      setCustomersDates(data);
+                      } 
+                      catch (err) {
+               
+                     throw new Error("Unable to fetch the customers");
+                   }
+                  };
+                  fetchData1();
+        
+        
+        
+        
+                },  [],
     )
     
+   
+    function changeArray () {
+      setToggleArray(CustomersDates);
+   
+    }
+
+    function changeArray1 () {
+      setToggleArray(Customers);
+    
+    }
 
    
     
@@ -86,10 +120,16 @@ return (
 <div class="container py-5" >
     <h1>{total} Total Customers</h1>
     <button onClick={()=>clear()}> {subtract} New Customers since last clear </button>
-</div>
+  
+  <h1>Search By:</h1>
+  <button onClick={()=>changeArray()}>Order by Date</button>
+  <button onClick={()=>changeArray1()}>Order by Last Name</button>
+  
+  </div>
 
 
 <div  class="container py-5" style={{backgroundColor: "white"}}>
+ 
 
 <Table striped bordered hover size="sm">
   <thead>
@@ -109,7 +149,7 @@ return (
   </thead>
 
   <tbody>
-   {Customers.map(items => (
+   {ToggleArray.map(items => (
     <tr key={items.id}>
       <td>{items.id}</td>
       <td>{items.firstName}</td>
