@@ -11,10 +11,15 @@ return (
     <div class="footer-top">
       <div class="container">
         <div class="row">
+          
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
               <h3>La Belle</h3>
+
+
+
+              
               <p> Eagan, MN 55122
              1654 Diffley Rd # 104,<br></br>
              Eagan, MN 55122<br></br>
@@ -41,13 +46,23 @@ return (
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Connect with Us</h4>
             <ul>
+            <div class="social-links mt-3">
+            
+            <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          
+          </div>
+          <div class="social-links mt-3">
+            
+            <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          
+          </div>
+
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+
+
             </ul>
           </div>
 
@@ -60,12 +75,7 @@ return (
             </form>
 
           </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+          <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>La Belle</span></strong>. All Rights Reserved
       </div>
@@ -74,6 +84,12 @@ return (
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
+
+        </div>
+      </div>
+    </div>
+
+
   </footer>
   
   {/*-- End Footer */}
