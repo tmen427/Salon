@@ -324,25 +324,7 @@ return (
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt=""></img>
-            <div class="menu-content">
-              <a href="#">Tuscan Grilled</a><span>$9.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/mozzarella.jpg" class="menu-img" alt=""></img>
-            <div class="menu-content">
-              <a href="#">Mozzarella Stick</a><span>$4.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
+         
 
       
 
@@ -484,7 +466,7 @@ return (
 
           <div className="col-lg-8">
        
-       <iframe style={{border:"0", width: "100%", height: "350px"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.9028501296198!2d-93.1909030844795!3d44.80316848532704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f631e331ab0459%3A0x6d799632aaa856d3!2sLa%20Belle%20Nail%20%26%20Spa!5e0!3m2!1sen!2sus!4v1597874032630!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+       <iframe style={{border:"0", width: "100%", height: "350px", borderRadius: "3px"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.9028501296198!2d-93.1909030844795!3d44.80316848532704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f631e331ab0459%3A0x6d799632aaa856d3!2sLa%20Belle%20Nail%20%26%20Spa!5e0!3m2!1sen!2sus!4v1597874032630!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
      </div>
           
  </div>
