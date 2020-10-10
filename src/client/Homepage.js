@@ -434,7 +434,7 @@ return (
    </section>
 
    {/* ======= Contact Section ======= */}
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" style={{backgroundColor: "#1a1814"}}>
       <div class="container" >
 
         <div class="section-title">
