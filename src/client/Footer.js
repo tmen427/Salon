@@ -58,9 +58,9 @@ return (
           
      <li>
              <div class="social-links mt-3">
-               <i class="bx bx-chevron-right"></i>
              <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
-   
+             <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
+             <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
            </div>
             </li>
 
@@ -76,7 +76,7 @@ return (
   
           <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>La Belle Nails and Spa</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>La Belle Nails and Spa</span></strong>.
       </div>
     
     </div>

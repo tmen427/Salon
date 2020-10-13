@@ -1664,7 +1664,7 @@ section {
   background: black;
   padding: 0 0 0 0;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #footer .footer-top {
@@ -1679,7 +1679,7 @@ section {
 }
 
 #footer .footer-top .footer-info h3 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
@@ -1718,7 +1718,7 @@ section {
 }
 
 #footer .footer-top h4 {
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 600;
   color: #fff;
   position: relative;
@@ -1800,7 +1800,7 @@ section {
 }
 
 #footer .copyright {
-  text-align: center;
+
   padding-top: 30px;
 }
 
