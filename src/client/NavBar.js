@@ -216,7 +216,7 @@ function NavBar () {
 
 
 function home () {
-      alert(window.location.href);
+    //  alert(window.location.href);
   if (window.location.href==='http://localhost:3000/All') { 
    // if your clicking from page http://localhost:3000/All, then goto the homepage then set a new localstorage value
 
