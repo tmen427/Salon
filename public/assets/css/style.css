@@ -1711,6 +1711,19 @@ section {
   transition: 0.3s;
 }
 
+.cookies{
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 10px;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+
+  transition: 0.3s;
+}
+
 #footer .footer-top .social-links a:hover {
   background: #cda45e;
   color: #fff;

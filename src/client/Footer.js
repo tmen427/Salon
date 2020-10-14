@@ -20,43 +20,46 @@ return (
 
 
               
-              <p> Eagan, MN 55122
-             1654 Diffley Rd # 104,<br></br>
-             Eagan, MN 55122<br></br>
-                <strong>Phone:</strong>  651-452-8090<br></br>
-                <strong>Email:</strong> info@example.com<br></br>
-              </p>
+          
           
             </div>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>About</h4>
             <ul>
+            <div class="cookies">
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-         
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-         
+</div>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Connect with Us</h4>
+            <h4>Contact</h4>
             <ul>
+        <li>
+             <div class="social-links mt-3">
+             <strong>Address:</strong> Eagan, MN 55122
+             1654 Diffley Rd # 104,<br></br>
+             Eagan, MN 55122<br></br>
+             <strong>Phone:</strong>  651-452-8090<br></br>
+                <strong>Email:</strong> info@example.com<br></br>
+         
+           </div>
+            </li>
+
+
+
+            </ul>
+          </div>
        
 
-          
-     <li>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Follow Us</h4>
+            <ul>
+        <li>
              <div class="social-links mt-3">
              <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
              <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
