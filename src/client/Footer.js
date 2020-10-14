@@ -11,19 +11,8 @@ return (
     <div class="footer-top">
       <div class="container">
         <div class="row">
-          
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>La Belle Nails and Spa</h3>
-
-
-
-              
-          
-          
-            </div>
-          </div>
+ 
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>About</h4>
@@ -35,6 +24,26 @@ return (
 </div>
             </ul>
           </div>
+
+          
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Hours</h4>
+            <ul>
+        <li>
+             <div class="social-links mt-3">
+             <strong>Monday-Friday:</strong> 8am- 7pm<br></br>
+   
+             <strong>Saturday:</strong> 8am-7pm<br></br>
+                <strong>Sunday:</strong> 8am-7pm<br></br>
+         
+           </div>
+            </li>
+
+
+
+            </ul>
+          </div>
+
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Contact</h4>
