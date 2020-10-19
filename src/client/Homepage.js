@@ -267,8 +267,8 @@ return (
       <div class="container" >
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Check Out Our Services</p>
+        
+          <p>Services</p>
         </div>
 
         <div class="row" >
@@ -290,37 +290,37 @@ return (
               <a href="#">Extra Callus Removal</a><span>$10</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+      
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt=""></img>
             <div class="menu-content">
-              <a href="#">Bread Barrel</a><span>$6.95</span>
+              <a href="/Booking">Manicures </a><span>$10</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+           
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/cake.jpg" class="menu-img" alt=""></img>
             <div class="menu-content">
-              <a href="#">Crab Cake</a><span>$7.95</span>
+              <a href="/Booking">Aritficial Toe Nails</a><span>$8 and up</span>
             </div>
             <div class="menu-ingredients">
-              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+        
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/caesar.jpg" class="menu-img" alt=""></img>
             <div class="menu-content">
-              <a href="#">Caesar Selections</a><span>$8.95</span>
+              <a href="/Booking">Design on Big Toes</a><span>$8.95</span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+       
             </div>
           </div>
 
@@ -336,6 +336,44 @@ return (
     </section>{/* End Menu Section */}
 
 
+    <section id="why-us" class="why-us">
+      <div class="container" >
+
+        <div class="section-title">
+      
+          <p>Testimonials</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box"  >
+           
+              <h4>"I appreciate the quiet surroundings and the straightforward attention to detail.  I love you guys!"</h4>
+              <p> -Denise</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+       
+              <h4>"Very clean, beautiful decor and great customer service, plus my nails always turn out great!" </h4>
+              <p>-Lindsay</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box"  >
+             
+              <h4> "The ladies are always kind and gracious, and we always enjoy our experience"</h4>
+              <p>-Kelly</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
    
 

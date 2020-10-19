@@ -18,9 +18,9 @@ return (
             <h4>About</h4>
             <ul>
             <div class="cookies">
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/Booking">Booking </a></li>
+         
 </div>
             </ul>
           </div>

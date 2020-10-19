@@ -104,6 +104,9 @@ setPassword("");
 
 
     return (
+
+
+
       <div className="main-wrap">
       <div className="main-register-holder">
       <div className="main-register fl-wrap">
@@ -150,6 +153,8 @@ setPassword("");
     </div>
     </div>
     </div>
+
+   
     
   );
 }
