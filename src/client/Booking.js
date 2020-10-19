@@ -341,7 +341,7 @@ return (
 
    {/* ======= Contact Section ======= */}
 
-    <section id="contact" class="contact" style={{backgroundColor: "#1a1814"}}>
+    <section id="contact" class="contact" >
       <div class="container" >
 
         <div class="section-title">
