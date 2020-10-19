@@ -490,7 +490,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("../img/outside.jpg") top center;
+  background: url("../img/front1.jpg") top center;
 
   
   background-size: 100%;
@@ -1411,6 +1411,9 @@ section {
 /*--------------------------------------------------------------
 # Chefs
 --------------------------------------------------------------*/
+.img-fluid {
+  border-radius: 1000px;
+}
 .chefs .member {
   text-align: center;
   margin-bottom: 20px;

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect} from 'react';
 
 import {Dropdown, DropdownButton} from 'react-bootstrap'; 
 
-import belle from "./images/labelle.jpg";
+import belle from "./images/2.jpg";
 import inside from "./images/inside.jpg"; 
 
 import "./homepage.css";
@@ -228,14 +228,14 @@ return (
 
 
 {/*About me*/}
-{/*
+
   <section id="about" class="about">
       <div class="container" >
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" >
             <div class="about-img">
-              <img src={inside} alt=""></img>
+              <img src={belle} alt=""></img>
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -259,10 +259,12 @@ return (
 
       </div>
     </section>
-*/}     
+     
      {/* End About me*/}
 
+
     {/* ======= Menu Section ======= */}
+   {/* 
     <section id="menu" class="menu section-bg">
       <div class="container" >
 
@@ -295,7 +297,7 @@ return (
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt=""></img>
+            <img src={belle} class="menu-img" alt=""></img>
             <div class="menu-content">
               <a href="/Booking">Manicures </a><span>$10</span>
             </div>
@@ -305,7 +307,7 @@ return (
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/cake.jpg" class="menu-img" alt=""></img>
+            <img src={belle} class="menu-img" alt=""></img>
             <div class="menu-content">
               <a href="/Booking">Aritficial Toe Nails</a><span>$8 and up</span>
             </div>
@@ -315,7 +317,7 @@ return (
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <img src="assets/img/menu/caesar.jpg" class="menu-img" alt=""></img>
+            <img src={belle}class="menu-img" alt=""></img>
             <div class="menu-content">
               <a href="/Booking">Design on Big Toes</a><span>$8.95</span>
             </div>
@@ -333,7 +335,12 @@ return (
         </div>
 
       </div>
-    </section>{/* End Menu Section */}
+    </section>
+   */}
+    {/* End Menu Section */}
+
+
+
 
 
     <section id="why-us" class="why-us">
