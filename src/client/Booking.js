@@ -11,7 +11,7 @@ import "./homepage.css";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
-const Homepage  = () => {
+const Booking = () => {
 
 //const [Date, setDate] = useState(new Date()); 
 
@@ -203,28 +203,9 @@ function Dissapear () {
 return (
   <div>
    
-  {/* ======= Hero Section ======= */}
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-left" >
-      <div class="row">
-        <div class="col-lg-8">
-          <h1>Welcome to <span>La Belle </span></h1>
-          <h2>Delivering great service for more than 18 years!</h2>
-
-          <div class="contact-info mr-auto">
-        <i class="icofont-phone"></i> 651-452-8090   <br></br>
-        <span class="contact-info mr-auto"><i class="icofont-clock-time icofont-rotate-180"></i> Mon-Fri: 10:00 AM - 8:00 PM Sat: 9:00 AM - 6:00 PM Sun: 12-5 PM</span>
-      </div>
-
-
-
-       
-        </div>
-    
-
-      </div>
-    </div>
-  </section>{/* End Hero */}
+   <section class="inner-page">
+      <div class="container">
+   
 
 
 {/*About me*/}
@@ -262,80 +243,7 @@ return (
 */}     
      {/* End About me*/}
 
-    {/* ======= Menu Section ======= */}
-    <section id="menu" class="menu section-bg">
-      <div class="container" >
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Check Out Our Services</p>
-        </div>
-
-        <div class="row" >
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-starters">Pedicures</li>
-              <li data-filter=".filter-salads">Manicures</li>
-              <li data-filter=".filter-specialty">Specialty</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row menu-container">
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src={belle}class="menu-img" alt=""></img>
-            <div class="menu-content">
-              <a href="#">Extra Callus Removal</a><span>$10</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt=""></img>
-            <div class="menu-content">
-              <a href="#">Bread Barrel</a><span>$6.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/menu/cake.jpg" class="menu-img" alt=""></img>
-            <div class="menu-content">
-              <a href="#">Crab Cake</a><span>$7.95</span>
-            </div>
-            <div class="menu-ingredients">
-              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <img src="assets/img/menu/caesar.jpg" class="menu-img" alt=""></img>
-            <div class="menu-content">
-              <a href="#">Caesar Selections</a><span>$8.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-
-         
-
-      
-
-    
-
-        </div>
-
-      </div>
-    </section>{/* End Menu Section */}
-
-
+   
 
    
 
@@ -343,7 +251,7 @@ return (
 
 
 
- {/*
+ 
 
     <section id="book-a-table" class="book-a-table">
 
@@ -425,14 +333,14 @@ return (
    </section>
 
    
- */}
+ 
 
 
 
 
 
    {/* ======= Contact Section ======= */}
-   {/*
+
     <section id="contact" class="contact" style={{backgroundColor: "#1a1814"}}>
       <div class="container" >
 
@@ -492,7 +400,7 @@ return (
 
       
     </section>
-   */}
+
     {/* End Contact Section */}
 
 
@@ -510,7 +418,8 @@ return (
 
 
 
-
+  </div>
+    </section>
 
 
 
@@ -524,4 +433,4 @@ return (
 }
 
 
-export default Homepage; 
+export default Booking; 

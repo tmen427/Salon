@@ -13,6 +13,7 @@ import Homepage from "./client/Homepage";
 import PrivateRouting from './client/PrivateRouting';
 import Pricing from "./client/Pricing";
 import Footer from "./client/Footer";
+import Booking from "./client/Booking"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/Signup" component={Signup} />
+        <Route exact path="/Booking" component={Booking} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/SignOut" component={SignOut} />
         <Route exact path="/Pricing" component={Pricing} />
