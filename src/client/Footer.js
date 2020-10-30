@@ -7,98 +7,48 @@ var Footer= ()=> {
 return (
 <div>
 {/*Beginning of Footer */}
-  <footer id="footer" style={{backgroundColor:"blue"}}>
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
- 
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>About</h4>
-            <ul>
-            <div class="cookies">
-              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/Booking">Booking </a></li>
-         
-</div>
-            </ul>
-          </div>
-
-          
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Hours</h4>
-            <ul>
-        <li>
-             <div class="social-links mt-3">
-             <strong>Monday-Friday:</strong> 8am- 7pm<br></br>
-   
-             <strong>Saturday:</strong> 8am-7pm<br></br>
-                <strong>Sunday:</strong> 8am-7pm<br></br>
-         
-           </div>
-            </li>
-
-
-
-            </ul>
-          </div>
-
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact</h4>
-            <ul>
-        <li>
-             <div class="social-links mt-3">
-             <strong>Address:</strong> Eagan, MN 55122
-             1654 Diffley Rd # 104,<br></br>
-             Eagan, MN 55122<br></br>
-             <strong>Phone:</strong>  651-452-8090<br></br>
-                <strong>Email:</strong> info@example.com<br></br>
-         
-           </div>
-            </li>
-
-
-
-            </ul>
-          </div>
-       
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Follow Us</h4>
-            <ul>
-        <li>
-             <div class="social-links mt-3">
-             <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
-             <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
-             <a href="https://www.facebook.com/labellenailseagan/" class="facebook"><i class="bx bxl-facebook"></i></a>
-           </div>
-            </li>
-
-
-
-            </ul>
-          </div>
-
-
-
-      
-
-  
-          <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>La Belle Nails and Spa</span></strong>.
-      </div>
-    
-    </div>
-
-        </div>
-      </div>
-    </div>
-
-
-  </footer>
+<footer class="beautypress-footer-section">
+            <div class="container">
+                <div class="beautypress-footer-content">
+                    <div class="beautypress-footer-logo">
+                        <a href="index.html">
+                            <img src="img/footer_logo.png" alt=""></img>
+                        </a>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
+                            <div class="beautypress-single-footer">
+                                <p>We our currently open! Please call or book and appointment online!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
+                            <div class="beautypress-single-footer beautypress-single-footer-group">
+                                <p>Mon-Fri: 9 AM – 6 PM</p>
+                                <p>Saturday: 9 AM – 4 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
+                            <div class="beautypress-single-footer beautypress-single-footer-group">
+                                <p> Address: 
+                        1654 Diffley Rd 
+                        Eagan, MN 55122 </p>
+                                <p>Email: info@yoursite.com</p>
+                                <p>Telephone: (651) 452-8090</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beautypress-copyright-content">
+                <div class="container">
+                    <div class="beautypress-copyright-text">
+                        <p> La Belle Nails and Spa &copy; 2020 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
   
   {/*-- End Footer */}
 </div>

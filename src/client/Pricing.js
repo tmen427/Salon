@@ -1,10 +1,8 @@
 
-import React, { useState, useEffect} from 'react';
+import React, { } from 'react';
 
-import {Table, Media, Container, Row, Col} from 'react-bootstrap'; 
-import hands from "./images/hands.jpg"
-import pedicure from "./images/pedicure.jpg"; 
-import manicure from "./images/manicure.jpg";
+import {Table,  Container, Row, Col} from 'react-bootstrap'; 
+
 
 const Pricing = ()=> {
 

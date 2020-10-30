@@ -10,6 +10,7 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "csurf": "^1.11.0",
+    "date-fns": "^2.16.1",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "http-proxy-middleware": "^1.0.4",
@@ -26,6 +27,7 @@
     "react-bootstrap": "^1.0.1",
     "react-calendar": "^3.1.0",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.9.6",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"

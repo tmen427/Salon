@@ -2,10 +2,8 @@ import React, { useState, useRef, useEffect} from 'react';
 
 import {Dropdown, DropdownButton} from 'react-bootstrap'; 
 
-import belle from "./images/labelle.jpg";
-import inside from "./images/inside.jpg"; 
 
-import "./homepage.css";
+
 
 
 import Calendar from 'react-calendar';

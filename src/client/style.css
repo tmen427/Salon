@@ -636,7 +636,6 @@ Section
 
 .color-black {
     color: var(--color-semi-black) !important;
-    font-size: 50px !important;
 }
 
 .color-sky-blue {
@@ -1147,7 +1146,7 @@ Section
 }
 
 .beautypress-header-top .beautypress-version-2 .beautypress-language-select-list select {
-    background: url(../img/globe.png) no-repeat center left;
+
     color: #444444;
     font-size: 0.857em;
     padding: 2px 22px;
@@ -1187,7 +1186,6 @@ Section
 }
 
 .beautypress-main-header nav {
-  
     margin: 0;
     width: 100%;
     -webkit-box-pack: end;
@@ -1420,7 +1418,7 @@ Section
     position: absolute;
     right: 0;
     bottom: 0;
-    background-image: url(../img/mega_menu_bg.png);
+ 
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -1820,12 +1818,12 @@ Section
 .beautypress-new-about-img-wraper:before {
     top: -17px;
     left: -123px;
-    background-image: url(../img/new-about-style.png);
+ 
     background-position: top left;
 }
 
 .beautypress-new-about-img-wraper:after {
-    background-image: url(../img/new-about-style-2.png);
+
     right: -135px;
     bottom: 0;
     background-position: bottom right;
@@ -2381,7 +2379,6 @@ Section
 .beautypress-booking-form-wraper .form-group,
 .beautypress-booking-form-wraper .beautypress-select {
     margin: 0 0 20px;
-   
     width: 100%;
 }
 
@@ -3228,13 +3225,13 @@ Section
 
 .beautypress-icon-bg:before {
     left: 0;
-    background-image: url(../img/left-bg-icon.png);
+
     background-position: center top;
 }
 
 .beautypress-icon-bg:after {
     right: 0;
-    background-image: url(../img/right-bg-icon.png);
+
     background-position: center bottom;
 }
 
@@ -3575,12 +3572,12 @@ Section
     position: relative;
     /*padding: 133px 0 0 0;*/
     background-size: cover;
-    background-color: purple; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill= "rgb(103, 28, 152)" fill-opacity= "0.7" fill-rule= "evenodd" d="M0,10266s198.4,114,387,5,497.966-214.4,774-170,689.47,140,759,169v650H0v-654Z" transform="translate(0 -10090.6)"/></svg>');
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
     padding: 0;
-
+    padding-top: calc(100% * 1 / 10);
 }
 
 .beautypress-footer-section:after {
@@ -3590,7 +3587,8 @@ Section
     left: 0;
     height: 100%;
     width: 100%;
-
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill= "rgb(103, 28, 152)" fill-opacity= "0.7" fill-rule= "evenodd" d="M0,10095s570.853,396,1495,58c0,0,271.65-105.1,425-92v863H0v-829Z" transform="translate(0 -10059.8)"/></svg>');
+    pointer-events: none;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -3797,7 +3795,7 @@ Section
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(../img/select-icons.png) no-repeat center right;
+
     padding: 0 22px;
 }
 
@@ -4250,7 +4248,7 @@ Section
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../img/scissors.png);
+ 
     z-index: -1;
     pointer-events: none;
     background-size: 60% 70%;
@@ -4390,7 +4388,7 @@ Section
     transform: translateX(-50%);
     height: 165px;
     width: 225px;
-    background-image: url(../img/quote-icon.png);
+
     background-repeat: no-repeat;
     background-position: top center;
     opacity: .1;
@@ -4565,7 +4563,7 @@ Section
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../img/massage-watermark.png);
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -4979,15 +4977,15 @@ Section
 }
 
 .beautypress-single-pricing-table.beautypress-version-3.beautypress-image-overlay-1 .beautypress-pricing-header:before {
-    background-image: url(../img/pricing-overlay-1.png);
+  
 }
 
 .beautypress-single-pricing-table.beautypress-version-3.beautypress-image-overlay-2 .beautypress-pricing-header:before {
-    background-image: url(../img/pricing-overlay-2.png);
+
 }
 
 .beautypress-single-pricing-table.beautypress-version-3.beautypress-image-overlay-3 .beautypress-pricing-header:before {
-    background-image: url(../img/pricing-overlay-3.png);
+  
 }
 
 .beautypress-both-side-list.beautypress-version-3 li span {
@@ -5102,7 +5100,7 @@ Section
 }
 
 .beautypress-welcome-section.beautypress-welcome-version-4 .beautypress-welcome-slider-item.beautypress-version-1 .beautypress-welcome-content-group:before {
-    background-image: url(../img/women_1.png);
+
     width: 450px;
     bottom: -50px;
 }
@@ -5582,7 +5580,7 @@ Section
     content: "";
     bottom: 0;
     right: 0;
-    background-image: url(../img/stone_1.png);
+
     background-repeat: no-repeat;
     background-position: center center;
     height: 410px;
@@ -5678,7 +5676,7 @@ Section
     content: "";
     bottom: -90px;
     left: 0;
-    background-image: url(../img/stone_2.png);
+
     height: 428px;
     width: 428px;
     background-repeat: no-repeat;
@@ -6478,15 +6476,15 @@ Section
 }
 
 .beautypress-overlay-with-img.img-1:before {
-    background-image: url(../img/square-service-bg.jpg);
+
 }
 
 .beautypress-overlay-with-img.img-2:before {
-    background-image: url(../img/skin_care.jpg);
+
 }
 
 .beautypress-overlay-with-img.img-3:before {
-    background-image: url(../img/spa_care.jpg);
+  
 }
 
 .beautypress-single-square-service-content:hover .beautypress-overlay-with-img {
@@ -7733,7 +7731,7 @@ Section
     left: 30px;
     height: 100%;
     width: 100%;
-    background-image: url(../img/massage-icon.png);
+  
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
