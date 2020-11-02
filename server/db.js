@@ -5,21 +5,15 @@ var connection;
 //if deploying on heroku
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL); }
-  //if deploying to AWS
-  else if ({
+  else {
     connection = mysql.createConnection({
-       host:	'database-1.ck5ruutdz55a.us-east-2.rds.amazonaws.com',
-       port:	'3306',
-        user:	'admin',
-       password:	'Mortalkombat10!', 
+       host:	'localhost',
+       port:	'8889',
+        user:	'root',
+       password:	'root', 
       database: 'Salon'
-  })
   });
- 
-
-
-
-
+  };
 
 //make the connection to the database
 

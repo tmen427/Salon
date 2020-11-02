@@ -255,6 +255,8 @@ const REACT_CALANDER = () => {
          return (
 <div>
    <Calendar
+   prev2Label={null}
+   next2Label={null}
    onChange={change_it}
    value={date} 
    tileDisabled={tileDisabled}
@@ -353,7 +355,7 @@ return (
     
 
 
-        <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  style={{backgroundImage: `url(${hands2})`}}>
+        <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  style={{backgroundImage: `url(${spa})`}}>
             <div class="container">
                 <div class="beautypress-section-headinig beautypress-version-2">
                     <h2>We are awesome</h2>
@@ -363,6 +365,7 @@ return (
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
                         <div class="beautypress-booking-text-wraper">
+                           {/*
                             <div class="beautypress-booking-content-text beautypress-border beautypress-version-3">
                                 <div class="beautypress-booking-text">
                                     <h2>Time Schedule</h2>
@@ -374,16 +377,60 @@ return (
                                         <li>Sunday: Close</li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>*/}
                         </div>
+                           
                     </div>
                     <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
                         <div class="beautypress-booking-form-wraper">
                             <form onSubmit={handleSubmit(handleSubmit1)} method="post" id="beautypress-booking-form">
                                 <input type="hidden" name="action" value="send_appointment_form"/>
-                                <div class="alert hidden" id="beautypress-form-msg"></div>
+                               
+
+                                <div class="beautypress-personal-information">
+                                    <h2>Your Information</h2>  
+                                    <div class="beautypress-spilit-container">
+                                      
+                                        <div class="form-group first-name-group">
+                                            <input type="text"  defaultValue={firstName} name="firstname" onChange={handleInputChange} ref={register({ required: true, pattern: /^[a-zA-Z]+$/, maxLength: 10})}class="form-control" placeholder="First Name...." />
+                      {errors.firstname && errors.firstname.type === 'required' &&  'First name is required.'}
+                                            {errors.firstname && errors.firstname.type === 'pattern' && 'First name cannot have numbers'}
+                                            {errors.firstname && errors.firstname.type === 'maxLength' && 'First name cannot be this long'}
+                            
+                                        
+                                        </div>
+                                        <div class="form-group last-name-group">
+                                            <input type="text" defaultValue={lastName}  ref={register({ required: true, pattern: /^[a-zA-Z]+$/, maxLength: 10})}name="lastname" onChange={handleInputChange}class="form-control"  placeholder="Last Name...." />
+                                            {errors.lastname && errors.lastname.type === 'required' &&  'Last name is required.'}
+                                            {errors.lastname && errors.lastname.type === 'pattern' && 'Last name cannot have numbers'}
+                                            {errors.lastname && errors.lastname.type === 'maxLength' && 'Last name cannot be this long'}
+                                        </div>
+                                      
+                                    </div> 
+
+                                    <div class="form-group email-group">
+                                            <input type="email" defaultValue={Email} name="email" ref={register({ required: true })}  onChange={handleInputChange} class="form-control" id="email" placeholder="Email Address...."></input>
+                                            {errors.email && 'Email is required.'}
+                                        </div>
+                              
+                                    <div class="form-group phone-group">
+                                        <input type="text" defaultValue={Phone}  name="phone" ref={register({ required: true, pattern: /\d+/, minLength:12})} onChange={handleInputChange}class="form-control" id="phone" placeholder="Phone Number...."></input>
+                                        {errors.phone &&  errors.phone.type === 'required' && 'Phone is required.'}
+                                        {errors.phone &&  errors.phone.type === 'pattern' && 'Phone requires numbers.'}
+                                        {errors.phone &&  errors.phone.type === 'minLength' && 'Has to be in format (nnn) nnnn-nnnn'}
+                                    </div>
+
+
+{/*
+                                    <div class="form-group massage-gropu">
+                                        <textarea class="form-control" rows="5" name="notes"  onChange={handleInputChange} id="appointment-comment" placeholder="Enter Message...."></textarea>
+                                    </div>
+*/}                    
+                                </div>
+
+                             {/*  <div class="alert hidden" id="beautypress-form-msg"></div> */}
                                 <div class="beautypress-service-and-date">
-                                    <h2>Service and Date</h2>
+                                  
                                     <div class="beautypress-select">
                                         <div class="input-group">
                                             <select name="servicetype"  onChange={handleInputChange} ref={register({ required: true})}id="appointment-service" class="form-control">
@@ -419,47 +466,13 @@ return (
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="beautypress-personal-information">
-                                    <h2>Personal Information</h2>  
-                                    <div class="beautypress-spilit-container">
-                                      
-                                        <div class="form-group first-name-group">
-                                            <input type="text"  defaultValue={firstName} name="firstname" onChange={handleInputChange} ref={register({ required: true, pattern: /^[a-zA-Z]+$/, maxLength: 10})}class="form-control" placeholder="First Name...." />
-                      {errors.firstname && errors.firstname.type === 'required' &&  'First name is required.'}
-                                            {errors.firstname && errors.firstname.type === 'pattern' && 'First name cannot have numbers'}
-                                            {errors.firstname && errors.firstname.type === 'maxLength' && 'First name cannot be this long'}
-                            
-                                        
-                                        </div>
-                                        <div class="form-group last-name-group">
-                                            <input type="text" defaultValue={lastName}  ref={register({ required: true, pattern: /^[a-zA-Z]+$/, maxLength: 10})}name="lastname" onChange={handleInputChange}class="form-control"  placeholder="Last Name...." />
-                                            {errors.lastname && errors.lastname.type === 'required' &&  'Last name is required.'}
-                                            {errors.lastname && errors.lastname.type === 'pattern' && 'Last name cannot have numbers'}
-                                            {errors.lastname && errors.lastname.type === 'maxLength' && 'Last name cannot be this long'}
-                                        </div>
-                                      
-                                    </div> 
-
-                                    <div class="form-group email-group">
-                                            <input type="email" defaultValue={Email} name="email" ref={register({ required: true })}  onChange={handleInputChange} class="form-control" id="email" placeholder="Email Address...."></input>
-                                            {errors.email && 'Email is required.'}
-                                        </div>
-                              
-                                    <div class="form-group phone-group">
-                                        <input type="text" defaultValue={Phone}  name="phone" ref={register({ required: true, pattern: /\d+/, minLength:12})} onChange={handleInputChange}class="form-control" id="phone" placeholder="Phone Number...."></input>
-                                        {errors.phone &&  errors.phone.type === 'required' && 'Phone is required.'}
-                                        {errors.phone &&  errors.phone.type === 'pattern' && 'Phone requires numbers.'}
-                                        {errors.phone &&  errors.phone.type === 'minLength' && 'Has to be in format (nnn) nnnn-nnnn'}
-                                    </div>
-
-                                    <div class="form-group massage-gropu">
-                                        <textarea class="form-control" rows="5" name="notes"  onChange={handleInputChange} id="appointment-comment" placeholder="Enter Message...."></textarea>
-                                    </div>
                                     <div class="form-group button-group">
                                         <input type="submit" name="submit" value="submit" id="beautypress-submit"></input>
                                     </div>
                                 </div>
+
+
+
                             </form>
                         </div>
                     </div>
