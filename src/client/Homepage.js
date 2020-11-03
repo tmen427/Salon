@@ -300,7 +300,7 @@ return (
                 <div class="beautypress-welcome-slider owl-carousel">
 
 
-                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${hands2})`, height: '75 !important'}} >
+                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${fingers})`, height: '75 !important'}} >
 							<div class="container">
 								<div class="beautypress-welcome-content-group">
 									<div class="beautypress-welcome-container">
@@ -310,8 +310,18 @@ return (
 										
 											<div class="beautypress-btn-wraper">
 												<a href="/Booking" class="xs-btn bg-color-pink round-btn box-shadow-btn">Book Appointment <span></span></a>
-												<a href="#" class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase <span></span></a>
-											</div>
+												<a href="#" class="xs-btn bg-color-purple round-btn box-shadow-btn">Call (651) 452-8090 <span></span></a>
+									     
+                                            </div>		
+                                            <h1 class="color-purple" style={{marginTop: '10px'}}>
+                                                <br></br>
+                                  
+                                                Mon-Fri: 9 AM – 6 PM
+
+                                                Saturday: 9 AM – 4 PM
+                                                    <br></br>
+                                                    Sunday: Closed    
+                                            </h1>
 										</div>
 									</div>
 								</div>
@@ -334,9 +344,13 @@ return (
                     <div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
                         <div class="beautypress-simple-text beautypress-watermark-icon">
                             <div class="beautypress-separetor-sub-heading">
-                                <h2>Our Secrets</h2>
+                                <h2>About Us</h2>
                             </div>
-                            <p style={{fontSize:"20px"}}>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly.</p>
+                            <p style={{fontSize:"20px"}}>
+                            Where high style doesn’t come with a high price tag and cost never impacts your confidence.
+                            Where you get a full salon experience from nail stylists who are passionate about making everyone look good.
+                            Where we stand for style.
+                             </p>
                             <div class="beautypress-btn-wraper">
                                 <a href="/Booking" class="xs-btn bg-color-purple round-btn box-shadow-btn">learn more <span></span></a>
                             </div>
@@ -354,7 +368,7 @@ return (
 
     
 
-
+{/*
         <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  style={{backgroundImage: `url(${spa})`}}>
             <div class="container">
                 <div class="beautypress-section-headinig beautypress-version-2">
@@ -365,19 +379,7 @@ return (
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
                         <div class="beautypress-booking-text-wraper">
-                           {/*
-                            <div class="beautypress-booking-content-text beautypress-border beautypress-version-3">
-                                <div class="beautypress-booking-text">
-                                    <h2>Time Schedule</h2>
-                                    <h3>Working Hours</h3>
-                                
-                                    <ul>
-                                        <li>Mon - Wed : 8:00am - 06:00pm</li>
-                                        <li>Thu - Sat : 10:00am - 10:00pm</li>
-                                        <li>Sunday: Close</li>
-                                    </ul>
-                                </div>
-                            </div>*/}
+                          
                         </div>
                            
                     </div>
@@ -421,14 +423,10 @@ return (
                                     </div>
 
 
-{/*
-                                    <div class="form-group massage-gropu">
-                                        <textarea class="form-control" rows="5" name="notes"  onChange={handleInputChange} id="appointment-comment" placeholder="Enter Message...."></textarea>
-                                    </div>
-*/}                    
+               
                                 </div>
 
-                             {/*  <div class="alert hidden" id="beautypress-form-msg"></div> */}
+                     
                                 <div class="beautypress-service-and-date">
                                   
                                     <div class="beautypress-select">
@@ -482,7 +480,7 @@ return (
  
 
         
-
+*/}
         
 
      
@@ -512,14 +510,14 @@ return (
                             </div>
                             <div class="beautypress-pricing-footer">
                                 <ul class="beautypress-both-side-list beautypress-version-2">
-                                    <li>Teen's haircut<span>$45</span></li>
-                                    <li>Men's haircut<span>$42</span></li>
-                                    <li>Children's haircut<span>$56</span></li>
-                                    <li>Women's haircut<span>$76</span></li>
+                                    <li>Essentials Pedicure<span>$30</span></li>
+                                    <li>Signature Pedicure<span>$45</span></li>
+                                    <li>La Belle Relax Pedicure<span>$45</span></li>
+                
                                 </ul>
 
                                 <div class="beautypress-btn-wraper">
-                                    <a href="/Booking" class="xs-btn round-btn box-shadow-btn bg-color-purple">Appointment Now <span></span></a>
+                                    <a href="/Booking" class="xs-btn round-btn box-shadow-btn bg-color-purple">Book Now <span></span></a>
                                 </div>
                             </div>
                         </div>
@@ -540,14 +538,14 @@ return (
                             </div>
                             <div class="beautypress-pricing-footer">
                                 <ul class="beautypress-both-side-list beautypress-version-2">
-                                    <li>Just eyes<span>$45</span></li>
-                                    <li>Bridal trail<span>$42</span></li>
-                                    <li>Regular makeup<span>$56</span></li>
-                                    <li>Quick fix makeup<span>$76</span></li>
+                                    <li>Essentials Pedicure<span>$30</span></li>
+                                    <li>Signature Pedicure<span>$30</span></li>
+                                    <li>La Belle Relax Pedicure<span>$40</span></li>
+                                
                                 </ul>
 
                                 <div class="beautypress-btn-wraper">
-                                    <a href="/Booking" class="xs-btn round-btn box-shadow-btn bg-color-pink">Appointment Now <span></span></a>
+                                    <a href="/Booking" class="xs-btn round-btn box-shadow-btn bg-color-pink">Book Now <span></span></a>
                                 </div>
                             </div>
                         </div>
@@ -568,14 +566,14 @@ return (
                             </div>
                             <div class="beautypress-pricing-footer">
                                 <ul class="beautypress-both-side-list beautypress-version-2">
-                                    <li>Just eyes<span>$45</span></li>
-                                    <li>Bridal trail<span>$42</span></li>
-                                    <li>Regular makeup<span>$56</span></li>
-                                    <li>Quick fix makeup<span>$76</span></li>
+                                    <li>Bio-Free Gel Message<span>$15</span></li>
+                                    <li>Gel Polish Removal<span>$10</span></li>
+                                    <li>Artifical Nails<span>$10</span></li>
+                          
                                 </ul>
 
                                 <div class="beautypress-btn-wraper">
-                                    <a href="/Booking" class="xs-btn round-btn box-shadow-btn bg-color-purple">Appointment Now <span></span></a>
+                                    <a href="/Booking" class="xs-btn round-btn box-shadow-btn bg-color-purple">Book Now <span></span></a>
                                 </div>
                             </div>
                         </div>

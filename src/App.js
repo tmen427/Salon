@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter,Switch,Route,} from "react-router-dom";
 
-import MakeAppointment from "./client/MakeAppointment";
+
 import AllCustomers from "./client/AllCustomers";
 import NavBar from "./client/NavBar"; 
 import Signup from "./client/signup/signup.component"; 
@@ -33,7 +33,7 @@ function App() {
 
   <PrivateRouting>
     <Route exact path="/All" component={AllCustomers} />
-    <Route exact path="/MakeAppointment" component={MakeAppointment} />
+
   </PrivateRouting>
 
       </Switch>

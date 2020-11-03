@@ -116,7 +116,7 @@ return (
 <header class="beautypress-header-section beautypress-version-1 header-height-calc-minus navbar-fixed">
           
        
-          <div class="beautypress-main-header" style={{backgroundColor:"#681C98"}}>
+          <div class="beautypress-main-header" style={{backgroundColor:"white"}}>
               <div class="container">
                   <nav class="xs_nav beautypress-nav beautypress-mega-menu">
                       
@@ -127,16 +127,16 @@ return (
                       <div class="nav-menus-wrapper">
                        
                           <ul class="nav-menu">
-                              <li><a href="/" style={{fontSize: "15px", color: "white"}}>Home</a>
+                              <li><a href="/" style={{fontSize: "15px", color: "black"}}>Home</a>
                               
                               </li>
-                              <li><a href="/Booking"  style={{fontSize: "15px", color:"white"}}>Booking</a>
+                              <li><a href="/Booking"  style={{fontSize: "15px", color:"black"}}>Booking</a>
                               
                               </li>
-                              <li><a href="/About"  style={{fontSize: "15px", color:"white"}}>About Us</a>
+                              <li><a href="/Signup"  style={{fontSize: "15px", color:"black"}}>Sign Up</a>
                                
                               </li>
-                              <li><a href="/Login"  style={{fontSize: "15px", color:"white"}}>Login</a>
+                              <li><a href="/Login"  style={{fontSize: "15px", color:"black"}}>Login</a>
                                
                               </li>
 
