@@ -4,9 +4,9 @@ import { useForm } from 'react-hook-form';
 import {Button} from 'react-bootstrap'; 
 
 import fingers from "./img/fingers.jpg"; 
-import tawel_stone from "./img/tawel_stone.png"
+import polish from "./img/purple.jpg";
 import spa from "./img/green.jpg"; 
-import hands2 from "./img/polish.jpg"; 
+import watch from "./img/pink.jpeg"; 
 import section from "./img/section-heading-separetor.png";
 
 import Calendar from 'react-calendar';
@@ -300,7 +300,7 @@ return (
                 <div class="beautypress-welcome-slider owl-carousel">
 
 
-                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${fingers})`, height: '75 !important'}} >
+                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${watch})`, height: '75 !important'}} >
 							<div class="container">
 								<div class="beautypress-welcome-content-group">
 									<div class="beautypress-welcome-container">
@@ -335,37 +335,34 @@ return (
 
 
   
-
-
-      
-        <section class="beautypress-simple-text-with-img-section bg-color-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
-             
-                            <div class="beautypress-separetor-sub-heading">
-                                <h2>About Us</h2>
-                            </div>
-                            <p style={{fontSize:"20px"}}>
-                            Where high style doesn’t come with a high price tag and cost never impacts your confidence.
-                            Where you get a full salon experience from nail stylists who are passionate about making everyone look good.
-                            Where we stand for style.
-                             </p>
-                            <div class="beautypress-btn-wraper">
-                                <a href="/Booking" class="xs-btn bg-color-purple round-btn box-shadow-btn">learn more <span></span></a>
-                            </div>
-               
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
-                        <div class="beautypress-simple-img-wraper">
-                            <img src={tawel_stone} alt=""></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     
 
+        <section class="beautypress-simple-text-with-img-section bg-color-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
+						<div class="beautypress-simple-text beautypress-version-2">
+							<div class="beautypress-big-sub-heading">
+								<h2>Secret of</h2>
+								<h3>La Belle</h3>
+							</div>
+							<div class="beautypress-simple-text-content">
+								<p>   Where high style doesn’t come with a high price tag and cost never impacts your confidence.
+                            Where you get a full salon experience from nail stylists who are passionate about making everyone look good.
+                            Where we stand for style.</p>
+							</div>
+						
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
+					
+							<img style={{marginTop: '60px'}} src={polish} alt=""></img>
+	
+			
+					</div>
+				</div>
+			</div>
+		</section>
     
 
 {/*
@@ -489,7 +486,7 @@ return (
          
             
             <div class="beautypress-section-headinig beautypress-version-2">
-                    <h2>We are awesome</h2>
+                    <h2>You are awesome</h2>
                     <h3>Pricing</h3>
              
                 </div>

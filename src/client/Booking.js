@@ -304,7 +304,7 @@ return (
         <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  >
             <div class="container">
                 <div class="beautypress-section-headinig beautypress-version-2">
-                    <h2>We are awesome</h2>
+                    <h2>You are awesome</h2>
                     <h3>Book Appointment</h3>
                  
                 </div>
