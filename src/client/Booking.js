@@ -301,7 +301,7 @@ return (
     
 
 
-        <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  style={{backgroundImage: `url(${spa})`}}>
+        <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  >
             <div class="container">
                 <div class="beautypress-section-headinig beautypress-version-2">
                     <h2>We are awesome</h2>
@@ -309,32 +309,21 @@ return (
                     <img src="img/section-heading-separetor.png" alt=""></img>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
-                        <div class="beautypress-booking-text-wraper">
-                           {/*
-                            <div class="beautypress-booking-content-text beautypress-border beautypress-version-3">
-                                <div class="beautypress-booking-text">
-                                    <h2>Time Schedule</h2>
-                                    <h3>Working Hours</h3>
-                                
-                                    <ul>
-                                        <li>Mon - Wed : 8:00am - 06:00pm</li>
-                                        <li>Thu - Sat : 10:00am - 10:00pm</li>
-                                        <li>Sunday: Close</li>
-                                    </ul>
-                                </div>
-                            </div>*/}
-                        </div>
-                           
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
+             
+                   <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
                         <div class="beautypress-booking-form-wraper">
                             <form onSubmit={handleSubmit(handleSubmit1)} method="post" id="beautypress-booking-form">
                                 <input type="hidden" name="action" value="send_appointment_form"/>
                                
 
                                 <div class="beautypress-personal-information">
-                                    <h2>Your Information</h2>  
+                                    <h2> Book an Appointment</h2>  
+                                    <p>Reservations are limited. Walk up guests are welcome and may experience a wait.
+Call 651.852.8090 for information.
+
+Filling out this form does not book a reservation. An email will be sent within 24 hours of your request to confirm the reservation.
+
+Weekend same day requests submitted online will not be honored.</p>
                                     <div class="beautypress-spilit-container">
                                       
                                         <div class="form-group first-name-group">
@@ -422,6 +411,38 @@ return (
                             </form>
                         </div>
                     </div>
+
+
+                    <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
+                    
+                    <div class="beautypress-personal-information">
+                           
+                    <iframe style={{border:"0", width: "100%", height: "400px", marginTop: '60px',padding:'10px', borderRadius: "10px"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.9028501296198!2d-93.1909030844795!3d44.80316848532704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f631e331ab0459%3A0x6d799632aaa856d3!2sLa%20Belle%20Nail%20%26%20Spa!5e0!3m2!1sen!2sus!4v1597874032630!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+                             
+                             <div style={{paddingLeft: '10px'}}>
+                             <h2 style={{paddingTop:'20px', fontSize:'20px',fontWeight:400}}>1654 Diffley Rd Eagan, MN 55122</h2>  
+                             <h2 style={{ fontSize:'20px',fontWeight:400}}>Mon-Fri: 9 AM – 6 PM</h2>
+                             <h2 style={{ fontSize:'20px',fontWeight:400}}>Saturday: 9 AM – 4 PM</h2>
+                             <h2 style={{ fontSize:'20px',fontWeight:400}}>Sunday:Closed</h2> 
+                             </div>  
+                             {/*
+                        <div class="beautypress-booking-content-text beautypress-border beautypress-version-3">
+                            <div class="beautypress-booking-text">
+                                <h2>Time Schedule</h2>
+                                <h3>Working Hours</h3>
+                            
+                                <ul>
+                                    <li>Mon - Wed : 8:00am - 06:00pm</li>
+                                    <li>Thu - Sat : 10:00am - 10:00pm</li>
+                                    <li>Sunday: Close</li>
+                                </ul>
+                            </div>
+                        </div>*/}   </div>
+   
+                       
+                </div>
+
+
                 </div>
             </div>
         </section>

@@ -338,11 +338,11 @@ return (
 
 
       
-        <section class="beautypress-simple-text-with-img-section bg-color-gray">
+        <section class="beautypress-simple-text-with-img-section bg-color-white">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
-                        <div class="beautypress-simple-text beautypress-watermark-icon">
+             
                             <div class="beautypress-separetor-sub-heading">
                                 <h2>About Us</h2>
                             </div>
@@ -354,7 +354,7 @@ return (
                             <div class="beautypress-btn-wraper">
                                 <a href="/Booking" class="xs-btn bg-color-purple round-btn box-shadow-btn">learn more <span></span></a>
                             </div>
-                        </div>
+               
                     </div>
                     <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
                         <div class="beautypress-simple-img-wraper">
@@ -484,7 +484,7 @@ return (
         
 
      
-        <section class="beautypress-pricing-table-section beautypress-padding-bottom">
+        <section class="beautypress-pricing-table-section beautypress-padding-bottom" style={{backgroundColor:'lightgrey'}}>
             <div class="container">
          
             
