@@ -306,7 +306,7 @@ return (
                 <div class="beautypress-section-headinig beautypress-version-2">
                     <h2>We are awesome</h2>
                     <h3>Book Appointment</h3>
-                    <img src="img/section-heading-separetor.png" alt=""></img>
+                 
                 </div>
                 <div class="row">
              

@@ -491,13 +491,13 @@ return (
             <div class="beautypress-section-headinig beautypress-version-2">
                     <h2>We are awesome</h2>
                     <h3>Pricing</h3>
-                    <img src="img/section-heading-separetor.png" alt=""></img>
+             
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
                         <div class="beautypress-single-pricing-table beautypress-version-4">
                             <div class="beautypress-pricing-header">
-                                <img src="img/pricing-1-v4.jpg" alt=""></img>
+                             {/*   <img src={fingers} alt=""></img> */}
                                 <div class="beautypress-pricing-header-content">
                                     <div class="beautypress-pricing-title">
                                         <h2>Pedicure</h2>
@@ -525,7 +525,7 @@ return (
                     <div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
                         <div class="beautypress-single-pricing-table beautypress-version-4">
                             <div class="beautypress-pricing-header">
-                                <img src="img/pricing-2-v4.jpg" alt=""></img>
+                             {/*   <img src={spa} alt=""></img> */}
                                 <div class="beautypress-pricing-header-content">
                                     <div class="beautypress-pricing-title">
                                         <h2>Manicure</h2>
@@ -553,7 +553,7 @@ return (
                     <div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
                         <div class="beautypress-single-pricing-table beautypress-version-4">
                             <div class="beautypress-pricing-header">
-                                <img src="img/pricing-3-v4.jpg" alt=""></img>
+                             {/*   <img src={tawel_stone} alt=""></img> */}
                                 <div class="beautypress-pricing-header-content">
                                     <div class="beautypress-pricing-title">
                                         <h2>Special</h2>

@@ -12,7 +12,7 @@ return (
                 <div class="beautypress-footer-content">
                     <div class="beautypress-footer-logo">
                         <a href="index.html">
-                            <img src="img/footer_logo.png" alt=""></img>
+                          
                         </a>
                     </div>
                    
