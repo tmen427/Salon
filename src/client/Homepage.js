@@ -4,9 +4,9 @@ import { useForm } from 'react-hook-form';
 import {Button} from 'react-bootstrap'; 
 
 import fingers from "./img/fingers.jpg"; 
-import polish from "./img/purple.jpg";
-import spa from "./img/green.jpg"; 
-import watch from "./img/pink.jpeg"; 
+import polish from "./img/polish.jpg";
+import pink from "./img/pink.jpeg"; 
+import lotus from "./img/green.jpg"; 
 import section from "./img/section-heading-separetor.png";
 
 import Calendar from 'react-calendar';
@@ -295,18 +295,17 @@ function Dissapear () {
 return (
   <div>
    
-   <section class="beautypress-welcome-section beautypress-welcome-version-4 welcome-height-calc-minus">
-            <div class="beautypress-welcome-slider-wraper">
-                <div class="beautypress-welcome-slider owl-carousel">
+   <section class="beautypress-welcome-section beautypress-welcome-version-4 ">
+{/* <section class="beautypress-welcome-section beautypress-welcome-version-4 welcome-height-calc-minus">     */}
 
 
-                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${watch})`, height: '75 !important'}} >
+                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${pink})`}} >
 							<div class="container">
 								<div class="beautypress-welcome-content-group">
 									<div class="beautypress-welcome-container">
 										<div class="beautypress-welcome-wraper">
 											<h2 class="color-pink">Welcome To</h2>
-											<h3 class="color-purple">La Belle Nail and Salon</h3>
+											<h3 class="color-purple">La Belle Nails and Spa</h3>
 										
 											<div class="beautypress-btn-wraper">
 												<a href="/Booking" class="xs-btn bg-color-pink round-btn box-shadow-btn">Book Appointment <span></span></a>
@@ -329,8 +328,7 @@ return (
 						</div>
               
                    
-                </div>
-            </div>
+       
         </section>
 
 
@@ -356,7 +354,7 @@ return (
 					</div>
 					<div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
 					
-							<img style={{marginTop: '60px'}} src={polish} alt=""></img>
+							<img style={{marginTop: '60px'}} src={fingers} alt=""></img>
 	
 			
 					</div>

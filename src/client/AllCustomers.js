@@ -64,66 +64,21 @@ const [ToggleArray, setToggleArray] = useState(Customers);
     
     }
 
-   
-    
-    
     var total = Customers.length; 
     console.log('the total is ' + total);
-    const [total1, setTotal1] = useState(total)
-
-    // the  value localstorage.setItem is orignally set in the NavBar.js 
-    var getlocalstorageCustomers = localStorage.getItem("TotalCustomer"); 
-    var convert_local = parseInt(getlocalstorageCustomers); 
-
-    // set the total number of customers when you load the page
-    const [orginal_customers, set_original_customers] = useState(convert_local);
-     
-    var subtract = Customers.length-convert_local; 
-    console.log('subtracdt value is ' + subtract)
-   
-    
-    
-    
-    useEffect(() => {
-    
-      const interval = setInterval(() => {
-      set_original_customers(calculate()); 
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-    
-
-
-  function calculate () {
-  
-
-    //if the total number customers appointment changes then refresh the page , use previous state...
-   // window.location.reload(); 
-    return  total-convert_local; 
-  }
-
-
-function clear () {
-  alert('updated local storage')
- 
-  localStorage.setItem("TotalCustomer", total); 
-  window.location.reload(); 
-}
-
 
 return (
 
-<div >
+<div style={{marginTop:"50px"}}>
 
 <section class="inner-page">
 <div class="container py-5" >
-    <h1>{total} Total Customers</h1>
-    <button onClick={()=>clear()}> {subtract} New Customers since last clear </button>
+    <h1>{total} Total Appoinments</h1>
+
   
   <h1>Search By:</h1>
-  <button onClick={()=>changeArray()}>Order by Date</button>
-  <button onClick={()=>changeArray1()}>Order by Last Name</button>
+  <button onClick={()=>changeArray()}>Date</button>
+  <button onClick={()=>changeArray1()}>Last Name</button>
   
   </div>
 
