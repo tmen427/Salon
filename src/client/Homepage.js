@@ -312,15 +312,7 @@ return (
 												<a href="#" class="xs-btn bg-color-purple round-btn box-shadow-btn">Call (651) 452-8090 <span></span></a>
 									     
                                             </div>		
-                                            <h1 class="color-purple" style={{marginTop: '10px'}}>
-                                                <br></br>
-                                  
-                                                Mon-Fri: 9 AM – 6 PM
-
-                                                Saturday: 9 AM – 4 PM
-                                                    <br></br>
-                                                    Sunday: Closed    
-                                            </h1>
+                                         
 										</div>
 									</div>
 								</div>
