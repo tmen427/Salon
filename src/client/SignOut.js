@@ -32,33 +32,43 @@ const [removeUsers, setremoveUsers] = useState("");
 
 
 return (
-<div >
+<div>
+       
     
-<main id="main">
-    <section class="breadcrumbs">
-      <div class="container">
+    
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2></h2>
-          <ol>
+    
+
+
+        <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  >
+            <div class="container">
+                <div class="beautypress-section-headinig beautypress-version-2">
+
+                    <h3 >You are now Logged out!</h3>
+                 
+                </div>
+                <div class="row">
+             
+        
+
+
+                </div>
+            </div>
+        </section>
+ 
+
+        
+
+        
+
      
-            <li></li>
-          </ol>
-        </div>
+        
 
-      </div>
-    </section>
 
-    <section class="inner-page">
-      <div class="container" >
-        <h3 style={{color: "white"}}>
-          You are now logged-out!
-        </h3>
-      </div>
-    </section>
 
-  </main>
-     </div>
+
+
+</div>
 
 
 ); 
