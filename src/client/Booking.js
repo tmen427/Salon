@@ -13,6 +13,38 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 const Booking  = () => {
+
+var today1 = format(new Date(), 'E MM/dd');
+console.log(today1)
+
+var tommorow = addDays(new Date(), 1);
+var format_tommorow = format(tommorow, 'E MM/dd');
+console.log(format_tommorow)
+
+var day2 = addDays(new Date(), 2);
+var format_day2 = format(day2, 'E MM/dd');
+console.log(format_day2)
+
+var day3 = addDays(new Date(), 3);
+var format_day3 = format(day3, 'E MM/dd');
+console.log(format_day3)
+
+var day4 = addDays(new Date(), 4);
+var format_day4 = format(day4, 'E MM/dd');
+console.log(format_day4)
+
+var day5 = addDays(new Date(), 5);
+var format_day5 = format(day5, 'E MM/dd');
+console.log(format_day5)
+
+
+var day6 = addDays(new Date(), 6);
+var format_day6 = format(day6, 'E MM/dd');
+console.log(format_day6)
+
+var days_array = [today1,format_tommorow,format_day2,format_day3,format_day4, format_day5, format_day6];
+console.log(' the array is' + days_array)
+
     const { register, errors, handleSubmit} = useForm();
 
 //const [Date, setDate] = useState(new Date()); 
@@ -157,9 +189,11 @@ const [servicetype, setServicetype] = useState("");
     setNotifactions(false)
   }
   if (name==='appointmentDay') {
+    console.log('apponintmentDay is ' + value)
         setAppointmentDay(value)
     } 
   if (name==='appointmentTime') {
+
     setAppointmentTime(value)
   }
   if(name==='notes') {
@@ -194,7 +228,7 @@ function tileDisabled({ date, view }) {
   }
 }
 
-var date_fns = format(new Date(), 'yyyy-MM-dd');
+var date_fns = format(new Date(), 'E MM/dd');
 console.log('date-fns value is ' + date_fns)
 
 var day_of_week = new Date().getDay();
@@ -216,13 +250,24 @@ function change_it (date) {
    
    }
 
+
+
+
    var weekday_hours= [1000,1030,1100,1130,1200,1230,1300,1330,1400,1430,1500,1530,1600,1630,1700,1730,1800,1830,1900]
    var convert_weekday_hours  = ['10:00 AM','10:30 AM','11:00 AM', '11:30 AM', '12:00 PM','12:30 PM','1:00 PM','1:30 PM','2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM','4:30 PM', '5:00 PM', '5:30 PM','6:00 PM','6:30 PM','7:00 PM']
    
    //var saturday_hours = [1000,1030,1100,1130,1200,1230,1300,1330,1400,1430,1500,1530,1600,1630,1700,1730]
    //var convert_saturday_hours = ['10:00 AM','10:30 AM','11:00 AM', '11:30 AM', '12:00 PM','12:30 PM','1:00 PM','1:30 PM','2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM','4:30 PM', '5:00 PM', '5:30 PM']
    
-   
+   //if the time you picked is equal to todays date then...run the available times function 
+   function do_it() {
+   if (AppointmentTime!==null && AppointmentTime===AppointmentTime) {
+
+     available_times(); 
+   }
+  }
+
+
    
    function available_times () {
    
@@ -295,12 +340,6 @@ function Dissapear () {
 return (
   <div>
        
-    
-    
-
-    
-
-
         <section class="beautypress-booking-section beautypress-bg beautypress-padding-bottom parallax-bg" data-parallax="scroll"  >
             <div class="container">
                 <div class="beautypress-section-headinig beautypress-version-2">
@@ -380,26 +419,50 @@ Weekend same day requests submitted online will not be honored.</p>
                                         </div>
                                     </div>
                                     <div class="beautypress-spilit-container">
+                                        
+                                         {/* 
                                         <div class="beautypress-date-select beautypress-select">
+                                     
                                         <div class="input-group">
-                                        <input  value={cutnumber}   name="appointmentDay"  ref={register({ required: true})} class="form-control" id="date"    placeholder="Date " onClick={handleClick}  />
+      <input  value={cutnumber}   name="appointmentDay"  ref={register({ required: true})} class="form-control" id="date"    placeholder="Date " onClick={handleClick}  />
          { showResults  ?  <div><div ><REACT_CALANDER /></div></div> : null}
          </div>                                {errors.appointmentDay && errors.appointmentDay.type === 'required' &&  'Date is required.'}
                                         </div>
+                                       */}
+
+
+      <div class="beautypress-date-select beautypress-select">
+                                     
+      <div class="input-group">
+         <select name="appointmentDay"  onChange={handleInputChange} ref={register({ required: true})} id="appointment-time" class="form-control">
+            <option value>Day</option>
+      { days_array  ? days_array.map(items=>(<option key={items}value={items}>{items}</option>)) : null}
+     
+                                     </select>                           
+     
+       {errors.appointmentDay && errors.appointmentDay.type === 'required' &&  'Date is required.'}
+      
+       </div>
+       </div>
+
+
                                         <div class="beautypress-select">
               
+                                           
                                             <div class="input-group">
-                                                <select name="appointmentTime"  onChange={handleInputChange} ref={register({ required: true})} id="appointment-time" class="form-control">
+                                                <select name="appointmentTime"  onChange={handleInputChange} ref={register({ required: true, pattern: /\d+/})} id="appointment-time" class="form-control">
                                                 <option value>Time</option>
                                                 
-                                                {!Calander_day?    <option value=""></option> :  date_fns===Calander_day && day_of_week!==6? remaining_time.map(items=>(<option key={items}value={items}>{items}</option>)):
+                                                {date_fns===AppointmentDay ? remaining_time.map(items=>(<option key={items}value={items}>{items}</option>)):
                                                  convert_weekday_hours.map(items=>(<option key={items} value={items}>{items}</option>)) }
 
                                                 
                                                 </select>
                                                 {errors.appointmentTime && errors.appointmentTime.type === 'required' &&  'Time is required.'}
+                                                {errors.appointmentTime && errors.appointmentTime.type === 'pattern' &&  'Pick a Different Time.'}
                                             </div>
                                         </div>
+                                   
                                     </div>
                                     <div class="form-group button-group">
                                         <input type="submit" name="submit" value="submit" id="beautypress-submit"></input>
