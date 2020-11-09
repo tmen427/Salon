@@ -277,7 +277,7 @@ function change_it (date) {
    var findfirst_index = weekday_hours.findIndex(isLargeNumber);
    console.log(findfirst_index)
    if (findfirst_index===-1) {
-      remaining_time.push('No more available times today')
+      remaining_time.push('None available today')
    }
    else available_times_react(findfirst_index)
    }
@@ -436,12 +436,11 @@ Weekend same day requests submitted online will not be honored.</p>
       <div class="input-group">
          <select name="appointmentDay"  onChange={handleInputChange} ref={register({ required: true})} id="appointment-time" class="form-control">
             <option value>Day</option>
-      { days_array  ? days_array.map(items=>(<option key={items}value={items}>{items}</option>)) : null}
+     {days_array.map(items=>(<option key={items}value={items}>{items}</option>)) }
      
-                                     </select>                           
-     
+              </select>                           
+  
        {errors.appointmentDay && errors.appointmentDay.type === 'required' &&  'Date is required.'}
-      
        </div>
        </div>
 

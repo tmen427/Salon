@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form';
 import {Button} from 'react-bootstrap'; 
 
 import fingers from "./img/fingers.jpg"; 
-import polish from "./img/polish.jpg";
-import pink from "./img/pink.jpeg"; 
-import lotus from "./img/green.jpg"; 
+import spa from "./img/polish.jpg";
+import pink1 from "./img/inside.jpg"; 
+import pink from "./img/polish.jpg"; 
+import hands from "./img/hands.jpg"; 
 import section from "./img/section-heading-separetor.png";
 
 import Calendar from 'react-calendar';
@@ -299,7 +300,7 @@ return (
 {/* <section class="beautypress-welcome-section beautypress-welcome-version-4 welcome-height-calc-minus">     */}
 
 
-                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${pink})`}} >
+                <div class="beautypress-welcome-slider-item content-left beautypress-bg" style={{backgroundImage: `url(${hands})`}} >
 							<div class="container">
 								<div class="beautypress-welcome-content-group">
 									<div class="beautypress-welcome-container">
@@ -327,7 +328,7 @@ return (
   
     
 
-        <section class="beautypress-simple-text-with-img-section bg-color-white">
+        <section class="beautypress-simple-text-with-img-section bg-color-white" style={{backgroundImage: `url(${pink})`, backgroundRepeat: 'no-repeat'}} >
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
@@ -346,7 +347,7 @@ return (
 					</div>
 					<div class="col-md-12 col-sm-12 col-xl-6 col-lg-6">
 					
-							<img style={{marginTop: '60px'}} src={fingers} alt=""></img>
+						<img style={{marginTop: '60px'}} src={pink1} alt=""></img> 
 	
 			
 					</div>
