@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { isWithinInterval, addDays, format } from 'date-fns';
 import { useForm } from 'react-hook-form';
 import {Button} from 'react-bootstrap'; 
-
+import {Modal} from 'react-bootstrap';
 import fingers from "./img/fingers.jpg"; 
 import tawel_stone from "./img/tawel_stone.png"
 import spa from "./img/green.jpg"; 
@@ -13,6 +13,13 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 const Booking  = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
 
 var today1 = format(new Date(), 'E MM/dd');
 console.log(today1)
@@ -419,16 +426,7 @@ Weekend same day requests submitted online will not be honored.</p>
                                         </div>
                                     </div>
                                     <div class="beautypress-spilit-container">
-                                        
-                                         {/* 
-                                        <div class="beautypress-date-select beautypress-select">
-                                     
-                                        <div class="input-group">
-      <input  value={cutnumber}   name="appointmentDay"  ref={register({ required: true})} class="form-control" id="date"    placeholder="Date " onClick={handleClick}  />
-         { showResults  ?  <div><div ><REACT_CALANDER /></div></div> : null}
-         </div>                                {errors.appointmentDay && errors.appointmentDay.type === 'required' &&  'Date is required.'}
-                                        </div>
-                                       */}
+                    
 
 
       <div class="beautypress-date-select beautypress-select">
@@ -464,8 +462,35 @@ Weekend same day requests submitted online will not be honored.</p>
                                    
                                     </div>
                                     <div class="form-group button-group">
-                                        <input type="submit" name="submit" value="submit" id="beautypress-submit"></input>
+                                        <input type="submit" name="submit" value="submit" id="beautypress-submit" onClick={handleShow}></input>
                                     </div>
+
+
+
+                                    <Modal style={{marginTop: "100px"}}
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton >
+          <Modal.Title>Appointment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body> 
+   <i>This is only a beta version, so don't worry no appointment will actually be set! </i>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="dark" onClick={handleClose} >
+            Close
+          </Button>
+
+        </Modal.Footer>
+      </Modal>
+    
+
+
+
                                 </div>
 
 
@@ -487,19 +512,7 @@ Weekend same day requests submitted online will not be honored.</p>
                              <h2 style={{ fontSize:'20px',fontWeight:400}}>Saturday: 9 AM – 4 PM</h2>
                              <h2 style={{ fontSize:'20px',fontWeight:400}}>Sunday:Closed</h2> 
                              </div>  
-                             {/*
-                        <div class="beautypress-booking-content-text beautypress-border beautypress-version-3">
-                            <div class="beautypress-booking-text">
-                                <h2>Time Schedule</h2>
-                                <h3>Working Hours</h3>
-                            
-                                <ul>
-                                    <li>Mon - Wed : 8:00am - 06:00pm</li>
-                                    <li>Thu - Sat : 10:00am - 10:00pm</li>
-                                    <li>Sunday: Close</li>
-                                </ul>
-                            </div>
-                        </div>*/}   </div>
+                      </div>
    
                        
                 </div>
