@@ -1,23 +1,35 @@
 const mysql = require('mysql');
+var connection; 
 
 
-
-
-  var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    port: 8889,
-    password:"root",
-    database: "Salon"
+//if deploying on heroku
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL); }
+  //if deploying to AWS
+  else if ({
+    connection = mysql.createConnection({
+       host:	'database-1.ck5ruutdz55a.us-east-2.rds.amazonaws.com',
+       port:	'3306',
+        user:	'admin',
+       password:	'Mortalkombat10!', 
+      database: 'Salon'
+  })
   });
-  
-  con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-  });
+ 
 
 
 
 
 
-module.exports = con;
+//make the connection to the database
+
+
+    
+    connection.connect(err => {
+      if (err) {
+        return err; 
+      }
+    });
+
+
+module.exports = connection; 
